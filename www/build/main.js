@@ -160,7 +160,7 @@ var KontaktPage = (function () {
     };
     KontaktPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-kontakt',template:/*ion-inline-start:"/Users/renedolar/Desktop/Git-Repository/drsolutions/src/pages/kontakt/kontakt.html"*/'<!--\n  Generated template for the KontaktPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>kontakt</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/renedolar/Desktop/Git-Repository/drsolutions/src/pages/kontakt/kontakt.html"*/,
+            selector: 'page-kontakt',template:/*ion-inline-start:"/Users/renedolar/Desktop/Git-Repository/drsolutions/src/pages/kontakt/kontakt.html"*/'<!--\n  Generated template for the KontaktPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>kontakt</ion-title>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/renedolar/Desktop/Git-Repository/drsolutions/src/pages/kontakt/kontakt.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], KontaktPage);
