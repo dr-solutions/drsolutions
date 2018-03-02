@@ -31,4 +31,296 @@ export class KomponentenPage {
     this.navCtrl.push(AlertPage);
   }
 
+  goToApp() {
+    console.log("test");
+  }
+
+  goToAvatar() {
+
+  }
+
+  goToBadge() {
+
+  }
+
+  goToButton() {
+
+  }
+
+  goToCheckbox() {
+
+  }
+
+  goToChip() {
+
+  }
+
+  goToCol() {
+
+  }
+
+  goToConfig() {
+
+  }
+
+  goToContent() {
+
+  }
+
+  goToDateTime() {
+  
+  }
+
+  goToEvents() {
+
+  }
+
+  goToFabButton() {
+
+  }
+
+  goToFabContainer() {
+
+  }
+
+  goToFooter() {
+
+  }
+
+  goToGrid() {
+
+  }
+
+  goToHaptic() {
+
+  }
+
+  goToHeader() {
+
+  }
+
+  goToHideWhen() {
+
+  }
+
+  goToIcon() {
+
+  }
+
+  goToImg() {
+
+  }
+
+  goToInfiniteScroll() {
+
+  }
+
+  goToInput() {
+
+  }
+
+  goToIonicErrorHandler() {
+
+  }
+
+  goToIonicModule() {
+
+  }
+
+  goToIonicPage() {
+
+  }
+
+  goToIonicPageModule() {
+
+  }
+
+  goToItem() {
+
+  }
+
+  goToItemOptions() {
+
+  }
+
+  goToItemRecorder() {
+
+  }
+
+  goToItemSliding() {
+
+  }
+
+  goToKeyboard() {
+
+  }
+
+  goToLabel() {
+
+  }
+
+  goToList() {
+
+  }
+
+  goToLoadingController() {
+
+  }
+
+  goToMenu() {
+
+  }
+
+  goToMenuClose() {
+
+  }
+
+  goToMenuController() {
+
+  }
+
+  goToMenuToggle() {
+
+  }
+
+  goToModalController() {
+
+  }
+
+  goToNav() {
+
+  }
+
+  goToNavbar() {
+
+  }
+
+  goToNavController() {
+
+  }
+
+  goToNavParams() {
+
+  }
+
+  goToNavPop() {
+
+  }
+
+  goToNavPush() {
+
+  }
+
+  goToNote() {
+
+  }
+
+  goToOption() {
+
+  }
+
+  goToPlatform() {
+
+  }
+
+  goToPlatformConfigToken() {
+
+  }
+
+  goToPopoverController() {
+
+  }
+
+  goToRadioButton() {
+
+  }
+
+  goToRadioGroup() {
+
+  }
+
+  goToRange() {
+
+  }
+
+  goToRefresher() {
+
+  }
+
+  goToregisterModeConfigs() {
+
+  }
+
+  goToRow() {
+
+  }
+
+  goToScroll() {
+
+  }
+
+  goToSearchbar() {
+
+  }
+
+  goToSelect() {
+
+  }
+
+  goToShowWhen() {
+
+  }
+
+  goToSlide() {
+
+  }
+
+  goToSpinner() {
+
+  }
+
+  goToSplitPane() {
+
+  }
+
+  goToTab() {
+
+  }
+
+  goToTabs() {
+
+  }
+
+  goToThumbnail() {
+
+  }
+
+  goToTitle() {
+
+  }
+
+  goToToastController() {
+
+  }
+
+  goToToogle() {
+
+  }
+
+  goToToolbar() {
+
+  }
+
+  goToTypography() {
+
+  }
+
+  goToViewController() {
+
+  }
+
+  goToVirualScroll() {
+    
+  }
+
 }
