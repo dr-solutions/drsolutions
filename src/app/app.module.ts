@@ -6,15 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { HomePage } from '../pages/home/home';
 import { KomponentenPage } from '../pages/komponenten/komponenten';
 import { ActionsheetPage } from '../pages/actionsheet/actionsheet';
 import { AlertPage } from '../pages/alert/alert';
-import { BenutzerProvider } from '../providers/benutzer/benutzer';
 import { ListPage } from '../pages/list/list';
+
+import { BenutzerProvider } from '../providers/benutzer/benutzer';
+import { RandomIntProvider } from '../providers/random-int/random-int';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { ListPage } from '../pages/list/list';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BenutzerProvider
+    BenutzerProvider,
+    RandomIntProvider
   ]
 })
 export class AppModule {}

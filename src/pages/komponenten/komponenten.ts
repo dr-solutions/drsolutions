@@ -10,7 +10,8 @@ import { ListPage } from '../list/list';
 })
 export class KomponentenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
