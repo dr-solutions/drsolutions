@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -10,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { KomponentenPage } from '../pages/komponenten/komponenten';
 import { ActionsheetPage } from '../pages/actionsheet/actionsheet';
 import { AlertPage } from '../pages/alert/alert';
+import { BenutzerProvider } from '../providers/benutzer/benutzer';
+import { ListPage } from '../pages/list/list';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,13 @@ import { AlertPage } from '../pages/alert/alert';
     HomePage,
     KomponentenPage,
     ActionsheetPage,
-    AlertPage
+    AlertPage,
+    ListPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +34,14 @@ import { AlertPage } from '../pages/alert/alert';
     HomePage,
     KomponentenPage,
     ActionsheetPage,
-    AlertPage
+    AlertPage,
+    ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BenutzerProvider
   ]
 })
 export class AppModule {}

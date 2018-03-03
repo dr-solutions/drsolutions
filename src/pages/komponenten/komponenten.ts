@@ -2,13 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ActionsheetPage } from '../actionsheet/actionsheet';
 import { AlertPage } from '../alert/alert';
-
-/**
- * Generated class for the KomponentenPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ListPage } from '../list/list';
 
 @Component({
   selector: 'page-komponenten',
@@ -160,7 +154,7 @@ export class KomponentenPage {
   }
 
   goToList() {
-
+    this.navCtrl.push(ListPage);
   }
 
   goToLoadingController() {
@@ -261,6 +255,14 @@ export class KomponentenPage {
 
   goToSearchbar() {
 
+  }
+
+  goToSegment() {
+
+  }
+
+  goToSegmentButton() {
+    
   }
 
   goToSelect() {

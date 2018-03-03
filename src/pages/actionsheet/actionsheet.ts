@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the 01ActionsheetPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { BenutzerProvider } from '../../providers/benutzer/benutzer';
 
 @Component({
   selector: 'page-actionsheet',
@@ -14,11 +8,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ActionsheetPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public benutzerProvider: BenutzerProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad 01ActionsheetPage');
+    this.benutzerProvider.getBenutzer().subscribe(data => {
+      console.log('data:', data);
+    });
   }
 
 }
