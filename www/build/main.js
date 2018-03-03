@@ -397,7 +397,9 @@ var RandomIntProvider = (function () {
     }
     RandomIntProvider.prototype.getRandomInteger = function () {
         return this.http.get('http://localhost:8080/backend-service/rest/backendService/generateRandomIntegerText?max=1001')
-            .map(this._mapDataToBenutzer);
+            .do(this._logResponse)
+            .map(this._mapDataToBenutzer)
+            .catch(this._throwError);
     };
     RandomIntProvider.prototype._logResponse = function (res) {
         console.log('Response: ', res);

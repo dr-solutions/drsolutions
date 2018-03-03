@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
@@ -11,7 +11,9 @@ export class RandomIntProvider {
 
   getRandomInteger() {
     return this.http.get('http://localhost:8080/backend-service/rest/backendService/generateRandomIntegerText?max=1001')
-      .map(this._mapDataToBenutzer);
+      .do(this._logResponse)
+      .map(this._mapDataToBenutzer)
+      .catch(this._throwError);
   }
 
 
