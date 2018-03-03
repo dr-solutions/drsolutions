@@ -18,6 +18,7 @@ import { ListPage } from '../pages/list/list';
 
 import { BenutzerProvider } from '../providers/benutzer/benutzer';
 import { RandomIntProvider } from '../providers/random-int/random-int';
+import { LaenderProvider } from '../providers/laender/laender';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { RandomIntProvider } from '../providers/random-int/random-int';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BenutzerProvider,
-    RandomIntProvider
+    RandomIntProvider,
+    LaenderProvider
   ]
 })
 export class AppModule {}
