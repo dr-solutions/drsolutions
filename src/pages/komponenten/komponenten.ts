@@ -4,6 +4,7 @@ import { ActionsheetPage } from '../actionsheet/actionsheet';
 import { AlertPage } from '../alert/alert';
 import { ListPage } from '../list/list';
 import { BadgePage } from '../badge/badge';
+import { AppPage } from '../app/app';
 
 @Component({
   selector: 'page-komponenten',
@@ -28,7 +29,7 @@ export class KomponentenPage {
   }
 
   goToApp() {
-    console.log("test");
+    this.navCtrl.push(AppPage);
   }
 
   goToAvatar() {
