@@ -5,11 +5,12 @@ import { RandomIntProvider } from '../../providers/random-int/random-int';
 
 @Component({
   selector: 'page-actionsheet',
-  templateUrl: 'actionsheet.html',
+  templateUrl: 'actionsheet.html'
 })
 export class ActionsheetPage {
 
   randomInt: number = 0;
+  errorMessage: string;
 
   constructor(public navCtrl: NavController,
               public actionSheetCtrl: ActionSheetController,
@@ -42,7 +43,11 @@ export class ActionsheetPage {
                 navTransition.then(() => {
                   // this.navCtrl.pop();
                 });
-              })
+              },
+              err => {
+                  console.error(err);
+                  this.errorMessage = err;
+              });
             return false;
           }
         },

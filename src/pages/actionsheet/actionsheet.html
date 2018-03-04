@@ -14,4 +14,11 @@
   <span class="row">Random Integer</span>
   <span class="row">{{ randomInt }}</span>
 
+  <div class="row"></div>
+
+  <div class="row" *ngIf="errorMessage">
+    <span>Error:</span>
+    <span>{{ errorMessage }}</span>
+  </div>
+
 </ion-content>

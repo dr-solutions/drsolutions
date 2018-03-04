@@ -30530,11 +30530,6 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-01-actionsheet .actionsheetTest {
-  color: colors((primary: #ff9100, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222, nigger: #532c00, btnColor: #c20000), secondary);
-  background-color: colors((primary: #ff9100, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222, nigger: #532c00, btnColor: #c20000), secondary);
-}
-
 page-komponenten ion-col button {
   width: 100%;
 }
