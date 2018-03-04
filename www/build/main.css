@@ -30530,6 +30530,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-badge img {
+  max-width: 10%;
+}
+
 page-komponenten ion-col button {
   width: 100%;
 }

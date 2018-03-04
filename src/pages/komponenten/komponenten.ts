@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ActionsheetPage } from '../actionsheet/actionsheet';
 import { AlertPage } from '../alert/alert';
 import { ListPage } from '../list/list';
+import { BadgePage } from '../badge/badge';
 
 @Component({
   selector: 'page-komponenten',
@@ -35,7 +36,7 @@ export class KomponentenPage {
   }
 
   goToBadge() {
-
+    this.navCtrl.push(BadgePage);
   }
 
   goToButton() {

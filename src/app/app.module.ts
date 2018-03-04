@@ -19,6 +19,7 @@ import { ListPage } from '../pages/list/list';
 import { BenutzerProvider } from '../providers/benutzer/benutzer';
 import { RandomIntProvider } from '../providers/random-int/random-int';
 import { LaenderProvider } from '../providers/laender/laender';
+import { BadgePage } from '../pages/badge/badge';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LaenderProvider } from '../providers/laender/laender';
     KomponentenPage,
     ActionsheetPage,
     AlertPage,
-    ListPage
+    ListPage,
+    BadgePage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { LaenderProvider } from '../providers/laender/laender';
     KomponentenPage,
     ActionsheetPage,
     AlertPage,
-    ListPage
+    ListPage,
+    BadgePage
   ],
   providers: [
     StatusBar,
