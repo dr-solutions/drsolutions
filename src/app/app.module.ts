@@ -21,6 +21,8 @@ import { RandomIntProvider } from '../providers/random-int/random-int';
 import { LaenderProvider } from '../providers/laender/laender';
 import { BadgePage } from '../pages/badge/badge';
 import { AppPage } from '../pages/app/app';
+import { AvatarPage } from '../pages/avatar/avatar';
+import { ButtonPage } from '../pages/button/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { AppPage } from '../pages/app/app';
     AlertPage,
     ListPage,
     BadgePage,
-    AppPage
+    AppPage,
+    AvatarPage,
+    ButtonPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { AppPage } from '../pages/app/app';
     AlertPage,
     ListPage,
     BadgePage,
-    AppPage
+    AppPage,
+    AvatarPage,
+    ButtonPage
   ],
   providers: [
     StatusBar,

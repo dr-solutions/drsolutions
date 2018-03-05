@@ -5,6 +5,8 @@ import { AlertPage } from '../alert/alert';
 import { ListPage } from '../list/list';
 import { BadgePage } from '../badge/badge';
 import { AppPage } from '../app/app';
+import { AvatarPage } from '../avatar/avatar';
+import { ButtonPage } from '../button/button';
 
 @Component({
   selector: 'page-komponenten',
@@ -33,7 +35,7 @@ export class KomponentenPage {
   }
 
   goToAvatar() {
-
+    this.navCtrl.push(AvatarPage);
   }
 
   goToBadge() {
@@ -41,7 +43,7 @@ export class KomponentenPage {
   }
 
   goToButton() {
-
+    this.navCtrl.push(ButtonPage);
   }
 
   goToCheckbox() {

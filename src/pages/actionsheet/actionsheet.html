@@ -11,14 +11,17 @@
 
   <button ion-button color="primary" (click)="presentActionSheet()">Öffne Actionsheet</button>
 
-  <span class="row">Random Integer</span>
-  <span class="row">{{ randomInt }}</span>
+  <ion-row>
+    <span>Random Integer</span>
+  </ion-row>
+  <ion-row>
+    <span>{{ randomInt }}</span>
+  </ion-row>
+  <ion-row></ion-row>
 
-  <div class="row"></div>
-
-  <div class="row" *ngIf="errorMessage">
+  <ion-row *ngIf="errorMessage">
     <span>Error:</span>
     <span>{{ errorMessage }}</span>
-  </div>
+  </ion-row>
 
 </ion-content>

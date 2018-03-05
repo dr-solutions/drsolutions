@@ -11,9 +11,9 @@
   <ion-item *ngFor="let land of laender">
     <img src="{{ land.flag }}" item-start/>
     {{ land .name }} 
-    <div class="row">
+    <ion-row>
       Einwohnerzahl:
-    </div>
+    </ion-row>
     <ion-badge item-end color="btnColor">
       {{ land.population | number }}
     </ion-badge>
