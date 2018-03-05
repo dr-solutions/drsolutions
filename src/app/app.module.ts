@@ -23,6 +23,7 @@ import { BadgePage } from '../pages/badge/badge';
 import { AppPage } from '../pages/app/app';
 import { AvatarPage } from '../pages/avatar/avatar';
 import { ButtonPage } from '../pages/button/button';
+import { CardPage } from '../pages/card/card';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ButtonPage } from '../pages/button/button';
     BadgePage,
     AppPage,
     AvatarPage,
-    ButtonPage
+    ButtonPage,
+    CardPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { ButtonPage } from '../pages/button/button';
     BadgePage,
     AppPage,
     AvatarPage,
-    ButtonPage
+    ButtonPage,
+    CardPage
   ],
   providers: [
     StatusBar,

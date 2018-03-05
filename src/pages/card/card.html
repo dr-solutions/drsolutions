@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Card Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let land of laender" class="myCard">
+
+    <ion-card-header class="cardHeader">
+      {{ land.name }}
+    </ion-card-header>
+
+    <ion-card-title>
+      Hauptstadt: {{ land.capital }}
+    </ion-card-title>
+      
+    <ion-card-content class="cardContent">
+      <img src="{{ land.flag }}">
+      <p class="cardText">Einwohnerzahl:</p>
+      <p class="cardText">{{ land.population }}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col *ngFor="let callingCode of land.callingCodes">
+        <button ion-button icon-left clear small>
+          <ion-icon name="call"></ion-icon>
+          <div>+{{ callingCode }}</div>
+        </button>
+      </ion-col>
+      <ion-col *ngFor="let domain of land.topLevelDomain">
+        <button ion-button icon-left clear small>
+          <ion-icon name="globe"></ion-icon>
+          <div>{{ domain }}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+      
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,14 @@
+page-card {
+    .myCard .cardHeader {
+        background: color($colors, primary);
+    }
+
+    .myCard .cardContent {
+        background: color($colors, myGrey);
+    }
+
+    .myCard .cardText {
+        text-align: center;
+    }
+
+}
