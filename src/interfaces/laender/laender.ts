@@ -16,6 +16,7 @@ export interface Laender {
     numericCode?: string;
     population?: number;
     region?: string;
+    subregion?: string;
     timezones?: string[];
     topLevelDomain?: string[];
     translations?: any;

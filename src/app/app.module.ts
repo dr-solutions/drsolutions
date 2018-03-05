@@ -24,6 +24,7 @@ import { AppPage } from '../pages/app/app';
 import { AvatarPage } from '../pages/avatar/avatar';
 import { ButtonPage } from '../pages/button/button';
 import { CardPage } from '../pages/card/card';
+import { CheckboxPage } from '../pages/checkbox/checkbox';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CardPage } from '../pages/card/card';
     AppPage,
     AvatarPage,
     ButtonPage,
-    CardPage
+    CardPage,
+    CheckboxPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { CardPage } from '../pages/card/card';
     AppPage,
     AvatarPage,
     ButtonPage,
-    CardPage
+    CardPage,
+    CheckboxPage
   ],
   providers: [
     StatusBar,

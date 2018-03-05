@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Checkbox Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label>Grenzländer von Österreich</ion-label>
+    <ion-label>Für mehr Infos klicken</ion-label>
+    <ion-item *ngFor="let border of borders">
+      <ion-checkbox color="primary" 
+                    (ionChange)="checkboxChanged($event, border)"
+                    (click)="checkboxClicked(border)">
+      </ion-checkbox>
+      <ion-label>{{ getLandNameByAlpha3Code(border) }}</ion-label>
+    </ion-item>
+
+
+    <ion-item *ngFor="let border of checkboxArray">
+      <ion-row>Name: {{ getLandByAlpha3Code(border).name }}</ion-row>
+      <ion-row>Nativer Name: {{ getLandByAlpha3Code(border).nativeName }}</ion-row>
+      <ion-row>Region: {{ getLandByAlpha3Code(border).region }}</ion-row>
+      <ion-row>Subregion: {{ getLandByAlpha3Code(border).subregion }}</ion-row>
+      <ion-row>Hauptstadt: {{ getLandByAlpha3Code(border).capital }}</ion-row>
+    </ion-item>
+
+</ion-content>

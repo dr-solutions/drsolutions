@@ -8,6 +8,7 @@ import { AppPage } from '../app/app';
 import { AvatarPage } from '../avatar/avatar';
 import { ButtonPage } from '../button/button';
 import { CardPage } from '../card/card';
+import { CheckboxPage } from '../checkbox/checkbox';
 
 @Component({
   selector: 'page-komponenten',
@@ -52,7 +53,7 @@ export class KomponentenPage {
   }
 
   goToCheckbox() {
-
+    this.navCtrl.push(CheckboxPage);
   }
 
   goToChip() {
