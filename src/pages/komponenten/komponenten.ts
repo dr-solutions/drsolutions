@@ -9,6 +9,9 @@ import { AvatarPage } from '../avatar/avatar';
 import { ButtonPage } from '../button/button';
 import { CardPage } from '../card/card';
 import { CheckboxPage } from '../checkbox/checkbox';
+import { ChipPage } from '../chip/chip';
+import { ColAndConfigPage } from '../col-and-config/col-and-config';
+import { ContentPage } from '../content/content';
 
 @Component({
   selector: 'page-komponenten',
@@ -57,19 +60,15 @@ export class KomponentenPage {
   }
 
   goToChip() {
-
+    this.navCtrl.push(ChipPage);
   }
 
-  goToCol() {
-
-  }
-
-  goToConfig() {
-
+  goToColAndConfig() {
+    this.navCtrl.push(ColAndConfigPage);
   }
 
   goToContent() {
-
+    this.navCtrl.push(ContentPage);
   }
 
   goToDateTime() {

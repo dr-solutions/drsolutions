@@ -25,6 +25,9 @@ import { AvatarPage } from '../pages/avatar/avatar';
 import { ButtonPage } from '../pages/button/button';
 import { CardPage } from '../pages/card/card';
 import { CheckboxPage } from '../pages/checkbox/checkbox';
+import { ChipPage } from '../pages/chip/chip';
+import { ColAndConfigPage } from '../pages/col-and-config/col-and-config';
+import { ContentPage } from '../pages/content/content';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { CheckboxPage } from '../pages/checkbox/checkbox';
     AvatarPage,
     ButtonPage,
     CardPage,
-    CheckboxPage
+    CheckboxPage,
+    ChipPage,
+    ColAndConfigPage,
+    ContentPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,10 @@ import { CheckboxPage } from '../pages/checkbox/checkbox';
     AvatarPage,
     ButtonPage,
     CardPage,
-    CheckboxPage
+    CheckboxPage,
+    ChipPage,
+    ColAndConfigPage,
+    ContentPage
   ],
   providers: [
     StatusBar,
