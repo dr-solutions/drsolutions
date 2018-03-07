@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>datetime</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate1" placeholder="Datum auswählen"></ion-datetime>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Testdatum 2</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myDate2"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Testdatum 3</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY"
+                    [(ngModel)]="myDate3" 
+                    cancelText="Abruch Abruch Abruch"
+                    doneText="Haben Fertig"
+                    (ionCancel)="canceled()"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Testdatum 4</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate4" min="2016" max="2020-10-31"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Testdatum 4</ion-label>
+      <ion-datetime displayFormat="DDDD MMMM YYYY" 
+                    [(ngModel)]="myDate4"
+                    min="2017"
+                    max="2019"
+                    [monthNames]="monthNames"
+                    [dayNames]="dayNames">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Testdatum 5</ion-label>
+        <ion-datetime displayFormat="DDD MMM YYYY" 
+                      [(ngModel)]="myDate5"
+                      min="2017"
+                      max="2019"
+                      [monthShortNames]="monthNamesShort"
+                      [dayShortNames]="dayNamesShort">
+        </ion-datetime>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -12,6 +12,8 @@ import { CheckboxPage } from '../checkbox/checkbox';
 import { ChipPage } from '../chip/chip';
 import { ColAndConfigPage } from '../col-and-config/col-and-config';
 import { ContentPage } from '../content/content';
+import { DatetimePage } from '../datetime/datetime';
+import { EventsPage } from '../events/events';
 
 @Component({
   selector: 'page-komponenten',
@@ -72,11 +74,11 @@ export class KomponentenPage {
   }
 
   goToDateTime() {
-  
+    this.navCtrl.push(DatetimePage);
   }
 
   goToEvents() {
-
+    this.navCtrl.push(EventsPage);
   }
 
   goToFabButton() {

@@ -27,7 +27,7 @@ export class CheckboxPage {
   }
 
   checkboxClicked(border) {
-    console.log('Border: ' , border);
+    console.log('Checkbox clicked: ' , border);
   }
 
   checkboxChanged(checkbox, border) {
@@ -37,7 +37,7 @@ export class CheckboxPage {
         this.checkboxArray = [];
         this.checkboxArray.push(border);
       } else {
-        if (!this.checkboxArray.includes(border)) {
+        if (!(this.checkboxArray.indexOf(border) >= 0)) {
             this.checkboxArray.push(border);
         };
       };

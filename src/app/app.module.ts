@@ -28,6 +28,9 @@ import { CheckboxPage } from '../pages/checkbox/checkbox';
 import { ChipPage } from '../pages/chip/chip';
 import { ColAndConfigPage } from '../pages/col-and-config/col-and-config';
 import { ContentPage } from '../pages/content/content';
+import { DatetimePage } from '../pages/datetime/datetime';
+import { EventsPage } from '../pages/events/events';
+import { EventsSubPage } from '../pages/events-sub/events-sub';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { ContentPage } from '../pages/content/content';
     CheckboxPage,
     ChipPage,
     ColAndConfigPage,
-    ContentPage
+    ContentPage,
+    DatetimePage,
+    EventsPage,
+    EventsSubPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,10 @@ import { ContentPage } from '../pages/content/content';
     CheckboxPage,
     ChipPage,
     ColAndConfigPage,
-    ContentPage
+    ContentPage,
+    DatetimePage,
+    EventsPage,
+    EventsSubPage
   ],
   providers: [
     StatusBar,

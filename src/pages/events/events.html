@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>events</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-input  placeholder="Text eingeben"
+              stacked
+              value=""
+              [(ngModel)]="myInput">
+  </ion-input>
+
+  <ion-row>
+      <button ion-button icon-left color="btnColor" small (click)="buttonClicked()">
+        <ion-icon name="ice-cream"></ion-icon>
+        Ab zur nächsten Seite mit den Wert des Inputs
+      </button>
+  </ion-row>
+</ion-content>
