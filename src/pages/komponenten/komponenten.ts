@@ -15,6 +15,8 @@ import { ContentPage } from '../content/content';
 import { DatetimePage } from '../datetime/datetime';
 import { EventsPage } from '../events/events';
 import { FabPage } from '../fab/fab';
+import { GesturesPage } from '../gestures/gestures';
+import { GridPage } from '../grid/grid';
 
 @Component({
   selector: 'page-komponenten',
@@ -86,19 +88,15 @@ export class KomponentenPage {
     this.navCtrl.push(FabPage);
   }
 
-  goToFooter() {
-
+  goToGestures() {
+    this.navCtrl.push(GesturesPage);
   }
 
   goToGrid() {
-
+    this.navCtrl.push(GridPage);
   }
 
   goToHaptic() {
-
-  }
-
-  goToHeader() {
 
   }
 

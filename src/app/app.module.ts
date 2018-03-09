@@ -32,6 +32,8 @@ import { DatetimePage } from '../pages/datetime/datetime';
 import { EventsPage } from '../pages/events/events';
 import { EventsSubPage } from '../pages/events-sub/events-sub';
 import { FabPage } from '../pages/fab/fab';
+import { GesturesPage } from '../pages/gestures/gestures';
+import { GridPage } from '../pages/grid/grid';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { FabPage } from '../pages/fab/fab';
     DatetimePage,
     EventsPage,
     EventsSubPage,
-    FabPage
+    FabPage,
+    GesturesPage,
+    GridPage
   ],
   imports: [
     BrowserModule,
@@ -81,7 +85,9 @@ import { FabPage } from '../pages/fab/fab';
     DatetimePage,
     EventsPage,
     EventsSubPage,
-    FabPage
+    FabPage,
+    GesturesPage,
+    GridPage
   ],
   providers: [
     StatusBar,

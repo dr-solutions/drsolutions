@@ -1,0 +1,17 @@
+page-grid {
+    
+  ion-col div {
+    background-color: color($colors, primary);
+    border: 1px solid color($colors, dark);
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    color: color($colors, light);
+  }
+
+  p {
+    padding: 10px 0 0 10px !important;
+    margin: 0;
+  }
+
+}
