@@ -17,6 +17,11 @@ import { EventsPage } from '../events/events';
 import { FabPage } from '../fab/fab';
 import { GesturesPage } from '../gestures/gestures';
 import { GridPage } from '../grid/grid';
+import { HapticPage } from '../haptic/haptic';
+import { HideWhenPage } from '../hide-when/hide-when';
+import { IconPage } from '../icon/icon';
+import { ImgPage } from '../img/img';
+import { InfiniteScrollPage } from '../infinite-scroll/infinite-scroll';
 
 @Component({
   selector: 'page-komponenten',
@@ -97,23 +102,23 @@ export class KomponentenPage {
   }
 
   goToHaptic() {
-
+    this.navCtrl.push(HapticPage);
   }
 
   goToHideWhen() {
-
+    this.navCtrl.push(HideWhenPage);
   }
 
   goToIcon() {
-
+    this.navCtrl.push(IconPage);
   }
 
   goToImg() {
-
+    this.navCtrl.push(ImgPage);
   }
 
   goToInfiniteScroll() {
-
+    this.navCtrl.push(InfiniteScrollPage);
   }
 
   goToInput() {

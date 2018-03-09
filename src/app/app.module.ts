@@ -34,6 +34,11 @@ import { EventsSubPage } from '../pages/events-sub/events-sub';
 import { FabPage } from '../pages/fab/fab';
 import { GesturesPage } from '../pages/gestures/gestures';
 import { GridPage } from '../pages/grid/grid';
+import { HapticPage } from '../pages/haptic/haptic';
+import { HideWhenPage } from '../pages/hide-when/hide-when';
+import { IconPage } from '../pages/icon/icon';
+import { ImgPage } from '../pages/img/img';
+import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -57,7 +62,12 @@ import { GridPage } from '../pages/grid/grid';
     EventsSubPage,
     FabPage,
     GesturesPage,
-    GridPage
+    GridPage,
+    HapticPage,
+    HideWhenPage,
+    IconPage,
+    ImgPage,
+    InfiniteScrollPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +97,12 @@ import { GridPage } from '../pages/grid/grid';
     EventsSubPage,
     FabPage,
     GesturesPage,
-    GridPage
+    GridPage,
+    HapticPage,
+    HideWhenPage,
+    IconPage,
+    ImgPage,
+    InfiniteScrollPage
   ],
   providers: [
     StatusBar,

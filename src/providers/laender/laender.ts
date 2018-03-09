@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Laender } from '../../interfaces/laender/laender';
 
 @Injectable()
 export class LaenderProvider {
@@ -16,6 +17,12 @@ export class LaenderProvider {
       .catch(this._throwError);
   }
 
+  getLaenderImages() {
+    return this.httpClient.get('https://restcountries.eu/rest/v2/regionalbloc/eu')
+    .do(this._logResponse)
+    .map(this._mapDataToLaenderImages)
+    .catch(this._throwError);
+  }
 
   private _logResponse(res) {
     console.log('Response: ', res);
@@ -23,6 +30,10 @@ export class LaenderProvider {
 
   private _mapDataToLaender(res) {
     return res;
+  }
+
+  private _mapDataToLaenderImages(res) {
+    return res.map((res: Laender) => res.flag);
   }
 
   private _throwError(error) {

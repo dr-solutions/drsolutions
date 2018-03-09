@@ -36459,20 +36459,6 @@ page-gestures .myCard {
   height: 90%;
 }
 
-page-grid ion-col div {
-  background-color: #ff9100;
-  border: 1px solid #222;
-  border-radius: 2px;
-  padding: 5px;
-  text-align: center;
-  color: #f4f4f4;
-}
-
-page-grid p {
-  padding: 10px 0 0 10px !important;
-  margin: 0;
-}
-
 page-komponenten ion-col button {
   width: 100%;
 }

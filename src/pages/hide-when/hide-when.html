@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>HideWhen Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div hideWhen="android">
+    I am hidden on Android!
+  </div>
+       
+  <div hideWhen="ios">
+    I am hidden on iOS!
+  </div>
+       
+  <div hideWhen="android,ios">
+    I am hidden on Android and iOS!
+  </div>
+       
+  <div hideWhen="portrait">
+    I am hidden on Portrait!
+  </div>
+       
+  <div hideWhen="landscape">
+    I am hidden on Landscape!
+  </div>
+
+  <ion-icon name="logo-apple" hideWhen="android, windows">
+    Aktuelle Platform
+  </ion-icon>
+
+  <ion-icon name="logo-android" hideWhen="ios, windows">
+    Aktuelle Platform
+  </ion-icon>
+
+  <ion-icon name="logo-windows" hideWhen="android, ios">
+    Aktuelle Platform
+  </ion-icon>
+
+</ion-content>
