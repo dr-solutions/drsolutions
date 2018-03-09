@@ -14,6 +14,7 @@ import { ColAndConfigPage } from '../col-and-config/col-and-config';
 import { ContentPage } from '../content/content';
 import { DatetimePage } from '../datetime/datetime';
 import { EventsPage } from '../events/events';
+import { FabPage } from '../fab/fab';
 
 @Component({
   selector: 'page-komponenten',
@@ -82,11 +83,7 @@ export class KomponentenPage {
   }
 
   goToFabButton() {
-
-  }
-
-  goToFabContainer() {
-
+    this.navCtrl.push(FabPage);
   }
 
   goToFooter() {

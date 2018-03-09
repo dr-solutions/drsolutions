@@ -31,6 +31,7 @@ import { ContentPage } from '../pages/content/content';
 import { DatetimePage } from '../pages/datetime/datetime';
 import { EventsPage } from '../pages/events/events';
 import { EventsSubPage } from '../pages/events-sub/events-sub';
+import { FabPage } from '../pages/fab/fab';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { EventsSubPage } from '../pages/events-sub/events-sub';
     ContentPage,
     DatetimePage,
     EventsPage,
-    EventsSubPage
+    EventsSubPage,
+    FabPage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import { EventsSubPage } from '../pages/events-sub/events-sub';
     ContentPage,
     DatetimePage,
     EventsPage,
-    EventsSubPage
+    EventsSubPage,
+    FabPage
   ],
   providers: [
     StatusBar,

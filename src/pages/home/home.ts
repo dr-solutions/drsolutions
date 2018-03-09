@@ -1,6 +1,7 @@
 import { Storage } from '@ionic/storage';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { KomponentenPage } from '../komponenten/komponenten';
 
 @Component({
   selector: 'page-home',
@@ -20,6 +21,10 @@ export class HomePage {
       }
     })
 
+  }
+
+  goToKomponenten() {
+    this.navCtrl.push(KomponentenPage);
   }
 
 }
