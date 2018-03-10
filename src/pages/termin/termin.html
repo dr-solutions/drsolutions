@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>termin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let termin of termine">
+      <ion-row>{{ termin.id }} </ion-row>
+      <ion-row>{{ termin.bezeichnung }} </ion-row>
+      <ion-row>{{ termin.beteiligtePersonen }} </ion-row>
+      <ion-row>{{ termin.zeitpunt | date:'dd.MM.yyyy'}} </ion-row>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

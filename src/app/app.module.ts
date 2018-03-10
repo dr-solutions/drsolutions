@@ -40,6 +40,8 @@ import { IconPage } from '../pages/icon/icon';
 import { ImgPage } from '../pages/img/img';
 import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
 import { InputPage } from '../pages/input/input';
+import { TerminProvider } from '../providers/termin/termin';
+import { TerminPage } from '../pages/termin/termin';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import { InputPage } from '../pages/input/input';
     IconPage,
     ImgPage,
     InfiniteScrollPage,
-    InputPage
+    InputPage,
+    TerminPage
   ],
   imports: [
     BrowserModule,
@@ -105,7 +108,8 @@ import { InputPage } from '../pages/input/input';
     IconPage,
     ImgPage,
     InfiniteScrollPage,
-    InputPage
+    InputPage,
+    TerminPage
   ],
   providers: [
     StatusBar,
@@ -113,7 +117,8 @@ import { InputPage } from '../pages/input/input';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BenutzerProvider,
     RandomIntProvider,
-    LaenderProvider
+    LaenderProvider,
+    TerminProvider
   ]
 })
 export class AppModule {}
