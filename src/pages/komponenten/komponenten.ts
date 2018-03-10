@@ -22,6 +22,7 @@ import { HideWhenPage } from '../hide-when/hide-when';
 import { IconPage } from '../icon/icon';
 import { ImgPage } from '../img/img';
 import { InfiniteScrollPage } from '../infinite-scroll/infinite-scroll';
+import { InputPage } from '../input/input';
 
 @Component({
   selector: 'page-komponenten',
@@ -122,7 +123,7 @@ export class KomponentenPage {
   }
 
   goToInput() {
-
+    this.navCtrl.push(InputPage);
   }
 
   goToIonicErrorHandler() {

@@ -39,6 +39,7 @@ import { HideWhenPage } from '../pages/hide-when/hide-when';
 import { IconPage } from '../pages/icon/icon';
 import { ImgPage } from '../pages/img/img';
 import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
+import { InputPage } from '../pages/input/input';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
     HideWhenPage,
     IconPage,
     ImgPage,
-    InfiniteScrollPage
+    InfiniteScrollPage,
+    InputPage
   ],
   imports: [
     BrowserModule,
@@ -102,7 +104,8 @@ import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
     HideWhenPage,
     IconPage,
     ImgPage,
-    InfiniteScrollPage
+    InfiniteScrollPage,
+    InputPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,186 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Input Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- input events können auch bei ion-input verwendet werden -->
+  <!-- (keyup), (keydown), (keypress), (input), (change), (focus), (invalid), (change), .... -->
+  <form name="testForm">
+    <ion-card>
+      <ion-card-header>
+        Verschiedene "Styles"
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label fixed>Fixed Label</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Floating Label</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Inline Label</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Placeholder"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Floating Label</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Floating Label</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        Verschiedene Typen
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="text" placeholder="Text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="email" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="number" placeholder="Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="search" placeholder="Search"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="tel" placeholder="Tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="url" placeholder="Url"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Other Properties
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input type="text" placeholder="Readonly" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Min 2 max 5" min="2" max="5"></ion-input>
+        </ion-item>      
+        <ion-item>
+          <ion-input type="text" placeholder="ClearOnEdit" clearOnEdit></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="ClearInput" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Autocorrect" autocorrect="on"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Autocomplete" autocomplete="on"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  <ion-card>
+    <ion-card-header>
+      Template Driven Form
+    </ion-card-header>
+    <ion-card-content>
+      <form #templateDrivenForm="ngForm" (ngSubmit)="onSubmitTemplateDrivenForm(templateDrivenForm)">
+        <ion-item>
+          <ion-label for="marke" floating>Automarke</ion-label>
+          <ion-input type="text" [(ngModel)]="auto.marke" name="marke" required></ion-input>
+        </ion-item>
+        <!-- Submit Button kann [disabled]="templateDrivenForm.invalid" haben -->
+        <button ion-button type="submit">Sign up</button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Reactive Form
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="processForm1()" [formGroup]="form1">
+        <ion-list>
+          <ion-item>
+            <ion-label for="vorname" floating>Vorname</ion-label>
+            <ion-input formControlName="vorname" type="text"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!form1.controls.vorname.valid  && (form1.controls.vorname.dirty || form1.controls.vorname.touched)">
+            <p class="errorMessage">Bitte Vornamen eingeben</p>
+          </ion-item>
+          <ion-item>
+            <ion-label for="nachname" floating>Nachname</ion-label>
+            <ion-input formControlName="nachname" type="text"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!form1.controls.nachname.valid  && (form1.controls.nachname.dirty || form1.controls.nachname.touched)">
+            <p class="errorMessage">Bitte Nachnamen eingeben</p>
+          </ion-item>
+          <ion-item>
+            <ion-label for="alter" floating>Alter</ion-label>
+            <ion-input formControlName="alter" type="text"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="!form1.controls.alter.valid  && (form1.controls.alter.dirty || form1.controls.alter.touched)">
+            <p class="errorMessage">Bitte korrektes Alter eingeben</p>
+          </ion-item>
+        </ion-list>
+        <!-- Submit Button sollte [disabled]="!form1.valid" haben -->
+        <button ion-button block type="submit">Submit</button>
+
+        <p>Vorname: {{ form1.get('vorname').value }}</p>
+        <p>Nachname: {{ form1.get('nachname').value }}</p>
+        <p>Alter: {{ form1.get('alter').value }}</p>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Reactive Form 2
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="processForm2()" [formGroup]="form2">
+        <ion-list>
+          <ion-item>
+            <ion-label for="vorname" floating>Vorname</ion-label>
+            <ion-input formControlName="vorname" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="nachname" floating>Nachname</ion-label>
+            <ion-input formControlName="nachname" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="alter" floating>Alter</ion-label>
+            <ion-input formControlName="alter" type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+        <!-- Submit Button sollte [disabled]="!form1.valid" haben -->
+        <button ion-button block type="submit">Submit</button>
+
+        <p>Name value: {{ form2.get('vorname').value }}</p>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
