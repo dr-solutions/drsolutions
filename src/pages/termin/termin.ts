@@ -9,6 +9,7 @@ import { Termin } from '../../interfaces/termin/termin';
 })
 export class TerminPage {
   termine: Termin[];
+  errorMessage: string;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -16,7 +17,11 @@ export class TerminPage {
     this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
       console.log('Das sind alle Termine: ', termine);
       this.termine = termine;
-    })
+    },
+    err => {
+        console.error(err);
+        this.errorMessage = err;
+    });
   }
 
 

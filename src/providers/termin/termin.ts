@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 @Injectable()
@@ -35,6 +34,10 @@ export class TerminProvider {
       console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
+    }
+    if (error.url === null) {
+      return new ErrorObservable(
+        'Service nicht verfügbar');
     }
     // return an ErrorObservable with a user-facing error message
     return new ErrorObservable(
