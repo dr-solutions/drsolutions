@@ -1850,13 +1850,13 @@ var TerminProvider = (function () {
             .catch(this._throwError);
     };
     TerminProvider.prototype.terminErstellen = function (termin) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]();
-        headers.set('Content-Type', 'application/json; charset=utf-8');
-        return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', {
-            termin: termin
-        }, {
-            headers: headers
-        })
+        var httpOptions = {
+            headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]({
+                'Content-Type': 'application/json',
+                'Authorization': 'my-auth-token'
+            })
+        };
+        return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', JSON.stringify(termin), httpOptions)
             .do(this._logResponse)
             .map(this._mapDataToTermine)
             .catch(this._throwError);
@@ -1937,9 +1937,9 @@ var TerminErstellungPage = (function () {
             var beteiligte = this.terminErstellungsForm.get('beiteiligtePersonen').value;
             var zeitpunkt = this.terminErstellungsForm.get('zeitpunkt').value;
             var termin = {
-                bezeichnung: bezeichnung,
-                beteiligtePersonen: beteiligte,
-                zeitpunt: zeitpunkt
+                'bezeichnung': bezeichnung,
+                'beteiligtePersonen': beteiligte,
+                'zeitpunt': zeitpunkt
             };
             this.terminProvider.terminErstellen(termin).subscribe(function (termine) {
                 console.log(termine);

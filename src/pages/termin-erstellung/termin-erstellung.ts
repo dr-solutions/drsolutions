@@ -34,9 +34,9 @@ export class TerminErstellungPage {
       const zeitpunkt = this.terminErstellungsForm.get('zeitpunkt').value;
 
       const termin: Termin = {
-        bezeichnung: bezeichnung,
-        beteiligtePersonen: beteiligte,
-        zeitpunt: zeitpunkt
+        'bezeichnung': bezeichnung,
+        'beteiligtePersonen': beteiligte,
+        'zeitpunt': zeitpunkt
       }
 
       this.terminProvider.terminErstellen(termin).subscribe((termine: Termin[]) => {

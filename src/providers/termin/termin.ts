@@ -18,16 +18,14 @@ export class TerminProvider {
   }
 
   terminErstellen(termin: Termin) {
-    const headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/json; charset=utf-8');
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'my-auth-token'
+      })
+    };
 
-    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
-      {
-        termin: termin
-      }, 
-      {
-        headers: headers}
-      )
+    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', JSON.stringify(termin), httpOptions)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
       .catch(this._throwError)
