@@ -21,7 +21,7 @@ export class TerminProvider {
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=utf-8');
 
-    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdate', 
+    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
       {
         termin: termin
       }, 
