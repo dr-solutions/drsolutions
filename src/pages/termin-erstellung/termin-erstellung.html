@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>terminErstellung</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Termin erstellen
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="submitTerminErstellungs()" [formGroup]="terminErstellungsForm">
+        <ion-list>
+          <ion-item>
+            <ion-label for="bezeichnung" floating>Bezeichnung</ion-label>
+            <ion-input formControlName="bezeichnung" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="beiteiligtePersonen" floating>Beteiligte</ion-label>
+            <ion-input formControlName="beiteiligtePersonen" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-datetime displayFormat="MMM DD YYYY"
+                          formControlName="zeitpunkt"
+                          placeholder="Zeitpunkt auswählen"
+                          min="2017"
+                          max="2020"
+                          cancelText="Abbrechen"
+                          doneText="Zeitpunkt übernehmen"></ion-datetime>
+          </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" 
+                [disabled]="!terminErstellungsForm.valid">
+          Termin erstellen
+        </button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

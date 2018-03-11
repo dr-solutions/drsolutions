@@ -31,7 +31,7 @@ export class InputPage {
       vorname: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
       nachname: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
       alter: ['', AlterValidator.isValid]
-  });
+    });
   }
 
   onSubmitTemplateDrivenForm(form) {

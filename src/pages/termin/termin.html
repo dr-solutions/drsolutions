@@ -12,14 +12,41 @@
 
 <ion-content padding>
 
+  <ion-row *ngIf="!errorMessage">
+    <ion-col offset-3>
+      <button ion-button icon-right color="primary" (click)="goToTerminErstellung()">
+        Termin anlegen
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+
   <ion-list>
     <ion-item *ngFor="let termin of termine">
       <ion-list-header>
-        <ion-row>{{ termin.id }} </ion-row>
-        <ion-row>{{ termin.bezeichnung }} </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <ion-icon name="calendar"></ion-icon>
+          </ion-col>
+          <ion-col col-11>
+            {{ termin.id }} {{ termin.bezeichnung }}
+          </ion-col>
+        </ion-row>
       </ion-list-header>
-      <ion-row>{{ termin.beteiligtePersonen }} </ion-row>
-      <ion-row>{{ termin.zeitpunt | date:'dd.MM.yyyy'}} </ion-row>
+      <ion-row>
+        <ion-item>Beteiligte: {{ termin.beteiligtePersonen }}</ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>Zeitpunkt: {{ termin.zeitpunt | date:'dd.MM.yyyy'}}</ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-col offset-2>
+          <button ion-button icon-right color="primary">
+            Termin bearbeiten
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
     </ion-item>
   </ion-list>
 

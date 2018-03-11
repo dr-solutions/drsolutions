@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+import { Termin } from '../../interfaces/termin/termin';
 
 @Injectable()
 export class TerminProvider {
@@ -12,15 +13,25 @@ export class TerminProvider {
   getTermine() {
     return this.httpClient.get('http://localhost:8080/dr-solutions/rest/backendService/getAllTermine')
       .do(this._logResponse)
-      .map(this._mapDataToTermin)
+      .map(this._mapDataToTermine)
       .catch(this._throwError);
+  }
+
+  terminErstellen(termin: Termin) {
+    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdate', 
+      {
+      termin: termin
+      })
+      .do(this._logResponse)
+      .map(this._mapDataToTermine)
+      .catch(this._throwError)
   }
 
   private _logResponse(res) {
     console.log('Response: ', res);
   }
 
-  private _mapDataToTermin(res) {
+  private _mapDataToTermine(res) {
     return res;
   }
 

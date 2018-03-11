@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TerminProvider } from '../../providers/termin/termin';
 import { Termin } from '../../interfaces/termin/termin';
+import { TerminErstellungPage } from '../termin-erstellung/termin-erstellung';
 
 @Component({
   selector: 'page-termin',
@@ -22,6 +23,10 @@ export class TerminPage {
         console.error(err);
         this.errorMessage = err;
     });
+  }
+
+  goToTerminErstellung() {
+    this.navCtrl.push(TerminErstellungPage);
   }
 
 
