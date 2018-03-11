@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Termin } from '../../interfaces/termin/termin';
 
 @Injectable()
-export class TerminProvider {
+export class TerminProvider {  
 
   constructor(public httpClient: HttpClient) {
     console.log('Hello TerminProvider Provider');
@@ -18,10 +18,16 @@ export class TerminProvider {
   }
 
   terminErstellen(termin: Termin) {
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json; charset=utf-8');
+
     return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdate', 
       {
-      termin: termin
-      })
+        termin: termin
+      }, 
+      {
+        headers: headers}
+      )
       .do(this._logResponse)
       .map(this._mapDataToTermine)
       .catch(this._throwError)

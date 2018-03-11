@@ -1850,8 +1850,12 @@ var TerminProvider = (function () {
             .catch(this._throwError);
     };
     TerminProvider.prototype.terminErstellen = function (termin) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]();
+        headers.set('Content-Type', 'application/json; charset=utf-8');
         return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdate', {
             termin: termin
+        }, {
+            headers: headers
         })
             .do(this._logResponse)
             .map(this._mapDataToTermine)
