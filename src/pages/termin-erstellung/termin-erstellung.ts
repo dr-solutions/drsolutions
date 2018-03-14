@@ -41,7 +41,7 @@ export class TerminErstellungPage {
 
       this.terminProvider.terminErstellen(termin).subscribe((termine: Termin[]) => {
         console.log(termine);
-        // this.navCtrl.push(TerminPage);
+        this.navCtrl.pop(TerminPage);
       },
       err => {
           console.error(err);

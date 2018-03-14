@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Termin } from '../../interfaces/termin/termin';
@@ -18,16 +18,8 @@ export class TerminProvider {
   }
 
   terminErstellen(termin: Termin) {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-        // 'Access-Control-Allow-Headers': 'Content-Type'
-      })
-    };
-
     return this.httpClient.post<Termin>('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
-      termin,
-      httpOptions)
+      termin)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
       .catch(this._throwError)
