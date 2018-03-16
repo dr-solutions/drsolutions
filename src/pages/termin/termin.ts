@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TerminProvider } from '../../providers/termin/termin';
 import { Termin } from '../../interfaces/termin/termin';
-import { TerminErstellungPage } from '../termin-erstellung/termin-erstellung';
+import { TerminSubPage } from '../termin-sub/termin-sub';
 
 @Component({
   selector: 'page-termin',
@@ -25,9 +25,23 @@ export class TerminPage {
     });
   }
 
-  goToTerminErstellung() {
-    this.navCtrl.push(TerminErstellungPage);
+  ionViewDidEnter() {
+    this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
+      console.log('Das sind alle Termine: ', termine);
+      this.termine = termine;
+    },
+    err => {
+        console.error(err);
+        this.errorMessage = err;
+    });
   }
 
+  goToTerminErstellung() {
+    this.navCtrl.push(TerminSubPage, {operation : 'erstellen'});
+  }
+
+  goToTerminBearbeitung(termin) {
+    this.navCtrl.push(TerminSubPage, {termin: termin, operation : 'bearbeiten'});
+  }
 
 }

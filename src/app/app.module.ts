@@ -42,7 +42,7 @@ import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
 import { InputPage } from '../pages/input/input';
 import { TerminProvider } from '../providers/termin/termin';
 import { TerminPage } from '../pages/termin/termin';
-import { TerminErstellungPage } from '../pages/termin-erstellung/termin-erstellung';
+import { TerminSubPage } from '../pages/termin-sub/termin-sub';
 
 @NgModule({
   declarations: [
@@ -74,7 +74,7 @@ import { TerminErstellungPage } from '../pages/termin-erstellung/termin-erstellu
     InfiniteScrollPage,
     InputPage,
     TerminPage,
-    TerminErstellungPage
+    TerminSubPage
   ],
   imports: [
     BrowserModule,
@@ -112,7 +112,7 @@ import { TerminErstellungPage } from '../pages/termin-erstellung/termin-erstellu
     InfiniteScrollPage,
     InputPage,
     TerminPage,
-    TerminErstellungPage
+    TerminSubPage
   ],
   providers: [
     StatusBar,
