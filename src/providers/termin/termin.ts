@@ -25,6 +25,20 @@ export class TerminProvider {
       .catch(this._throwError)
   }
 
+  terminAendern(termin: Termin) {
+    return this.httpClient.post<Termin>('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
+      termin)
+      .do(this._logResponse)
+      .map(this._mapDataToTermine)
+      .catch(this._throwError)
+  }
+
+  terminLoeschen(id: number) {
+    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/deleteTermin', id)
+    .map(this._mapDataToTermine)
+    .catch(this._throwError)
+  }
+
   private _logResponse(res) {
     console.log('Response: ', res);
   }

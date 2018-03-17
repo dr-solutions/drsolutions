@@ -40,10 +40,16 @@
         <ion-item>Zeitpunkt: {{ termin.zeitpunt | date:'dd.MM.yyyy'}}</ion-item>
       </ion-row>
       <ion-row>
-        <ion-col offset-2>
-          <button ion-button icon-right color="primary" (click)="goToTerminBearbeitung(termin)">
-            Termin bearbeiten
+        <ion-col col-6>
+          <button ion-button icon-right color="primary" (click)="goToTerminBearbeitung(termin)" mini>
+            Bearbeiten
             <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button icon-right color="primary" (click)="terminLoeschen(termin.id)" mini>
+            Löschen
+            <ion-icon name="trash"></ion-icon>
           </button>
         </ion-col>
       </ion-row>

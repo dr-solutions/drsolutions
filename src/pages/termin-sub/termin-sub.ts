@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Termin } from '../../interfaces/termin/termin';
 import { TerminProvider } from '../../providers/termin/termin';
@@ -17,6 +17,7 @@ export class TerminSubPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
+              public toastCtrl: ToastController,
               public formBuilder: FormBuilder,
               public terminProvider: TerminProvider) {
     this.operation = this.navParams.get("operation");  
@@ -58,6 +59,13 @@ export class TerminSubPage {
       this.terminProvider.terminErstellen(termin).subscribe((termine: Termin[]) => {
         console.log(termine);
         this.navCtrl.pop();
+        let createToast = this.toastCtrl.create({
+          message: termin.bezeichnung + ' wurde erfolgreich erstellt',
+          position: 'bottom',
+          cssClass: 'myToast',
+          duration: 2000
+        });
+        createToast.present();
       },
       err => {
           console.error(err);
@@ -79,9 +87,16 @@ export class TerminSubPage {
         'zeitpunt': zeitpunkt
       }
 
-      this.terminProvider.terminErstellen(termin).subscribe((termine: Termin[]) => {
+      this.terminProvider.terminAendern(termin).subscribe((termine: Termin[]) => {
         console.log(termine);
         this.navCtrl.pop();
+        let createToast = this.toastCtrl.create({
+          message: termin.bezeichnung + ' wurde erfolgreich geändert',
+          position: 'bottom',
+          cssClass: 'myToast',
+          duration: 2000
+        });
+        createToast.present();
       },
       err => {
           console.error(err);

@@ -36438,6 +36438,17 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.myToast .toast-wrapper {
+  background: #32db64;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.myToast .toast-message {
+  font-size: 2.0rem;
+  color: #222;
+}
+
 page-badge img {
   max-width: 10%;
 }
