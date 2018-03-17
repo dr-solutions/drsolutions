@@ -16,9 +16,7 @@ export class BenutzerProvider {
     return this.httpClient.get('https://randomuser.me/api/?results=5')
       .do(this._logResponse)          // gleich wie .do((res) => this._logResponse(res))
       .map(this._mapDataToBenutzer)   // gleich wie .map((res) => this._mapDataToBenutzer(res))
-      .catch(this._throwError);
   }
-
 
   private _logResponse(res) {
     console.log('Response: ', res);
@@ -26,11 +24,6 @@ export class BenutzerProvider {
 
   private _mapDataToBenutzer(res): Benutzer[] {
     return res.results;
-  }
-
-  private _throwError(error) {
-    console.error(error);
-    return Observable.throw('Server error');
   }
 
 }

@@ -2,7 +2,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -46,6 +46,8 @@ import { TerminSubPage } from '../pages/termin-sub/termin-sub';
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/catch";
+import { HttpInterceptor } from '../providers/interceptor/httpInterceptor';
+import { MyErrorHandler } from '../providers/handler/myErrorHandler';
 
 @NgModule({
   declarations: [
@@ -117,10 +119,11 @@ import "rxjs/add/operator/catch";
     TerminPage,
     TerminSubPage
   ],
-  providers: [
+  providers: [        
+    // {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true},
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ErrorHandler, useClass: MyErrorHandler},
     BenutzerProvider,
     RandomIntProvider,
     LaenderProvider,

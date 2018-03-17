@@ -20,10 +20,6 @@ export class TerminPage {
     this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
       console.log('Das sind alle Termine: ', termine);
       this.termine = termine;
-    },
-    err => {
-        console.error(err);
-        this.errorMessage = err;
     });
   }
 
@@ -31,10 +27,6 @@ export class TerminPage {
     this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
       console.log('Das sind alle Termine: ', termine);
       this.termine = termine;
-    },
-    err => {
-        console.error(err);
-        this.errorMessage = err;
     });
   }
 

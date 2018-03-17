@@ -66,9 +66,6 @@ export class TerminSubPage {
           duration: 2000
         });
         createToast.present();
-      },
-      err => {
-          console.error(err);
       });
     }
   }
@@ -97,9 +94,6 @@ export class TerminSubPage {
           duration: 2000
         });
         createToast.present();
-      },
-      err => {
-          console.error(err);
       });
     }
   }
