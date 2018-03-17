@@ -2,8 +2,8 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
+import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
@@ -46,7 +46,7 @@ import { TerminSubPage } from '../pages/termin-sub/termin-sub';
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/catch";
-import { HttpInterceptor } from '../providers/interceptor/httpInterceptor';
+// import { HttpInterceptor } from '../providers/interceptor/httpInterceptor';
 import { MyErrorHandler } from '../providers/handler/myErrorHandler';
 
 @NgModule({

@@ -2143,6 +2143,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { HttpInterceptor } from '../providers/interceptor/httpInterceptor';
 
 var AppModule = (function () {
     function AppModule() {
