@@ -43,6 +43,9 @@ import { InputPage } from '../pages/input/input';
 import { TerminProvider } from '../providers/termin/termin';
 import { TerminPage } from '../pages/termin/termin';
 import { TerminSubPage } from '../pages/termin-sub/termin-sub';
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/do";
+import "rxjs/add/operator/catch";
 
 @NgModule({
   declarations: [
