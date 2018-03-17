@@ -52,7 +52,7 @@ export class TerminPage {
     let deleteToast = this.toastCtrl.create({
       message: termin.bezeichnung + ' wurde erfolgreich gelöscht',
       position: 'top',
-      cssClass: 'myToast',
+      cssClass: 'erfolgreichToast',
       duration: 2000
     });
     deleteToast.present();

@@ -62,7 +62,7 @@ export class TerminSubPage {
         let createToast = this.toastCtrl.create({
           message: termin.bezeichnung + ' wurde erfolgreich erstellt',
           position: 'bottom',
-          cssClass: 'myToast',
+          cssClass: 'erfolgreichToast',
           duration: 2000
         });
         createToast.present();
@@ -93,7 +93,7 @@ export class TerminSubPage {
         let createToast = this.toastCtrl.create({
           message: termin.bezeichnung + ' wurde erfolgreich geändert',
           position: 'bottom',
-          cssClass: 'myToast',
+          cssClass: 'erfolgreichToast',
           duration: 2000
         });
         createToast.present();
