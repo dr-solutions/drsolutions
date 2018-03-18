@@ -10,13 +10,12 @@ import { TerminSubPage } from '../termin-sub/termin-sub';
 })
 export class TerminPage {
   termine: Termin[];
-  errorMessage: string;
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-              public toastCtrl: ToastController,
-              public alertCtrl: AlertController,
-              public terminProvider: TerminProvider) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public toastCtrl: ToastController,
+    public alertCtrl: AlertController,
+    public terminProvider: TerminProvider) {
     this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
       console.log('Das sind alle Termine: ', termine);
       this.termine = termine;
@@ -31,15 +30,15 @@ export class TerminPage {
   }
 
   goToTerminErstellung() {
-    this.navCtrl.push(TerminSubPage, {operation : 'erstellen'});
+    this.navCtrl.push(TerminSubPage, { operation: 'erstellen' });
   }
 
   goToTerminBearbeitung(termin) {
-    this.navCtrl.push(TerminSubPage, {termin: termin, operation : 'bearbeiten'});
+    this.navCtrl.push(TerminSubPage, { termin: termin, operation: 'bearbeiten' });
   }
 
   showConfirmation(id) {
-    this.showDeleteConfirmation(id); 
+    this.showDeleteConfirmation(id);
   }
 
   showDeleteConfirmation(id) {

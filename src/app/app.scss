@@ -40,3 +40,16 @@
     color: color($colors, hell);
   }
 }
+
+.warnungToast {
+  .toast-wrapper {
+    background: color($colors, primary);
+    opacity: 0.9;
+    text-align: center;
+  }
+
+  .toast-message {
+    font-size: 2.0rem;
+    color: color($colors, hell);
+  }
+}

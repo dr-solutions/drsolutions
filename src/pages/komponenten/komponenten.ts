@@ -34,10 +34,6 @@ export class KomponentenPage {
               public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad KomponentenPage');
-  }
-
   goToActionsheet() {
     this.navCtrl.push(ActionsheetPage);
   }

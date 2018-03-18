@@ -39810,6 +39810,17 @@ ion-navbar.toolbar {
   color: #ffffff;
 }
 
+.warnungToast .toast-wrapper {
+  background: #ff9100;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.warnungToast .toast-message {
+  font-size: 2.0rem;
+  color: #ffffff;
+}
+
 page-badge img {
   max-width: 10%;
 }

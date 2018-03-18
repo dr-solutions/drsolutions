@@ -17,7 +17,9 @@ export class BadgePage {
 
   ionViewDidLoad() {
     this.laenderProvider.getLaender().subscribe((laender: Laender[]) => {
-      this.laender = laender;
+      this.laender = laender
+        .filter(land => land.population > 10000000)
+        .sort((a, b) => a.population > b.population ? -1 : 1);
     });
   }
 

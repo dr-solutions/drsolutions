@@ -17,7 +17,7 @@ export class AvatarPage {
 
   ionViewDidLoad() {
     this.laenderProvider.getLaender().subscribe((laender: Laender[]) => {
-      this.laender = laender;
+      this.laender = laender.filter(land => land.name.startsWith('A'));
     });
   }
 

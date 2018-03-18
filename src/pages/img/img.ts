@@ -13,7 +13,7 @@ export class ImgPage {
               public navParams: NavParams,
               public laenderProvider: LaenderProvider) {
     this.laenderProvider.getLaenderImages().subscribe((flaggen: string[]) => {
-      this.flaggen = flaggen;
+      this.flaggen = flaggen.filter(flagge => flagge.endsWith('r.svg'));
     });
   }
 
