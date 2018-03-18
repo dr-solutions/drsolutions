@@ -122,16 +122,8 @@ export class KomponentenPage {
     this.navCtrl.push(InputPage);
   }
 
-  goToIonicErrorHandler() {
-
-  }
-
-  goToIonicModule() {
-
-  }
-
   goToIonicPage() {
-
+    this.navCtrl.push('meinePage');
   }
 
   goToIonicPageModule() {

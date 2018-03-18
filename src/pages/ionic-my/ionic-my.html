@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>IonicPage Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>Die Page hat ein eigenes Modul.</ion-row>
+  <ion-row>Dieses wird in App Modules injected (Das Modul und nicht die Page ansich).</ion-row>
+
+  <ion-row>Die Page selbst hat @IonicPage decorator</ion-row>
+
+  <ion-row>
+    Properties für diesen Decorator:
+  </ion-row>
+  <ion-row>
+    name: 'meinePage'
+  </ion-row>
+  <ion-row>
+    segment: 'myPage'
+  </ion-row>
+  <ion-row>
+    // Wenn segement nicht angegeben wird wird name verwendet
+  </ion-row>
+  <ion-row>
+    Zu segement Propertie können auch 'Url-Params' angegeben werden' z.b.: segment: 'myPage:id'
+  </ion-row>
+  <ion-row>
+    Diese muss dann beim wechsel (this.navCtrl.push) angegeben werden
+  </ion-row>
+  <ion-row>
+    defaultHistory: ['list']
+  </ion-row>
+  <ion-row>
+    defaultHistory wird verwendet um mit den Back Button speziell hin zu navigieren. z.B.: Back button würde jetzt zu list wechseln
+  </ion-row>
+  <ion-row>
+    priority: 'high'
+  </ion-row>
+  <ion-row>
+    Default priority: 'off'. High bedeutet beim App start die Page schon laden (nicht erst beim Klick auf die Page).
+  </ion-row>
+
+</ion-content>

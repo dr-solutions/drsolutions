@@ -10,7 +10,6 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { KomponentenPage } from '../pages/komponenten/komponenten';
 import { ActionsheetPage } from '../pages/actionsheet/actionsheet';
 import { AlertPage } from '../pages/alert/alert';
@@ -48,11 +47,12 @@ import "rxjs/add/operator/do";
 import "rxjs/add/operator/catch";
 // import { HttpInterceptor } from '../providers/interceptor/httpInterceptor';
 import { MyErrorHandler } from '../providers/handler/myErrorHandler';
+import { IonicMyPageModule } from '../pages/ionic-my/ionic-my.module';
+import { HomePageModule } from '../pages/home/home.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     KomponentenPage,
     ActionsheetPage,
     AlertPage,
@@ -82,15 +82,16 @@ import { MyErrorHandler } from '../providers/handler/myErrorHandler';
     TerminSubPage
   ],
   imports: [
+    HomePageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    IonicMyPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     KomponentenPage,
     ActionsheetPage,
     AlertPage,
