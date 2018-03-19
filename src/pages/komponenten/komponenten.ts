@@ -23,6 +23,9 @@ import { IconPage } from '../icon/icon';
 import { ImgPage } from '../img/img';
 import { InfiniteScrollPage } from '../infinite-scroll/infinite-scroll';
 import { InputPage } from '../input/input';
+import { ItemPage } from '../item/item';
+import { ItemSlidingPage } from '../item-sliding/item-sliding';
+import { ItemRecorderPage } from '../item-recorder/item-recorder';
 
 @Component({
   selector: 'page-komponenten',
@@ -126,24 +129,16 @@ export class KomponentenPage {
     this.navCtrl.push('meinePage');
   }
 
-  goToIonicPageModule() {
-
-  }
-
   goToItem() {
-
-  }
-
-  goToItemOptions() {
-
+    this.navCtrl.push(ItemPage);
   }
 
   goToItemRecorder() {
-
+    this.navCtrl.push(ItemRecorderPage);
   }
 
   goToItemSliding() {
-
+    this.navCtrl.push(ItemSlidingPage);
   }
 
   goToKeyboard() {

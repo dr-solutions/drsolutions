@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Item Recorder Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>Header</ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="reorderItems($event)">
+      <ion-item *ngFor="let item of items">{{ item.name }}</ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Header 1</ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="reorderItems2($event)">
+      <ion-item *ngFor="let item of items1">{{ item.name }}</ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Header 2</ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="$event.applyTo(items2)">
+      <ion-item *ngFor="let item of items2">{{ item.name }}</ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

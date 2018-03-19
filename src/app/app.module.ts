@@ -49,6 +49,9 @@ import "rxjs/add/operator/catch";
 import { MyErrorHandler } from '../providers/handler/myErrorHandler';
 import { IonicMyPageModule } from '../pages/ionic-my/ionic-my.module';
 import { HomePageModule } from '../pages/home/home.module';
+import { ItemPage } from '../pages/item/item';
+import { ItemRecorderPage } from '../pages/item-recorder/item-recorder';
+import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
 
 @NgModule({
   declarations: [
@@ -78,6 +81,9 @@ import { HomePageModule } from '../pages/home/home.module';
     ImgPage,
     InfiniteScrollPage,
     InputPage,
+    ItemPage,
+    ItemRecorderPage,
+    ItemSlidingPage,
     TerminPage,
     TerminSubPage
   ],
@@ -117,6 +123,9 @@ import { HomePageModule } from '../pages/home/home.module';
     ImgPage,
     InfiniteScrollPage,
     InputPage,
+    ItemPage,
+    ItemRecorderPage,
+    ItemSlidingPage,
     TerminPage,
     TerminSubPage
   ],
