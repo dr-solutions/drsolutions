@@ -55,6 +55,7 @@ import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
 import { KeyboardPage } from '../pages/keyboard/keyboard';
 import { LabelPage } from '../pages/label/label';
 import { DatePipe } from '@angular/common';
+import { LoadingPage } from '../pages/loading/loading';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { DatePipe } from '@angular/common';
     ItemSlidingPage,
     KeyboardPage,
     LabelPage,
+    LoadingPage,
     TerminPage,
     TerminSubPage
   ],
@@ -133,6 +135,7 @@ import { DatePipe } from '@angular/common';
     ItemSlidingPage,
     KeyboardPage,
     LabelPage,
+    LoadingPage,
     TerminPage,
     TerminSubPage
   ],

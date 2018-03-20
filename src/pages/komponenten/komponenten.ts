@@ -28,6 +28,7 @@ import { ItemSlidingPage } from '../item-sliding/item-sliding';
 import { ItemRecorderPage } from '../item-recorder/item-recorder';
 import { KeyboardPage } from '../keyboard/keyboard';
 import { LabelPage } from '../label/label';
+import { LoadingPage } from '../loading/loading';
 
 @Component({
   selector: 'page-komponenten',
@@ -156,7 +157,7 @@ export class KomponentenPage {
   }
 
   goToLoadingController() {
-
+    this.navCtrl.push(LoadingPage);
   }
 
   goToMenu() {
