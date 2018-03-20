@@ -12,4 +12,5 @@ export interface Benutzer {
     name?: Benutzername;
     phone?: string;
     picture?: Benutzerbilder;
+    registered?: string;
 }

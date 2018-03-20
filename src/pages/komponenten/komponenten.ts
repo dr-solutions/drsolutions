@@ -26,6 +26,8 @@ import { InputPage } from '../input/input';
 import { ItemPage } from '../item/item';
 import { ItemSlidingPage } from '../item-sliding/item-sliding';
 import { ItemRecorderPage } from '../item-recorder/item-recorder';
+import { KeyboardPage } from '../keyboard/keyboard';
+import { LabelPage } from '../label/label';
 
 @Component({
   selector: 'page-komponenten',
@@ -142,11 +144,11 @@ export class KomponentenPage {
   }
 
   goToKeyboard() {
-
+    this.navCtrl.push(KeyboardPage);
   }
 
   goToLabel() {
-
+    this.navCtrl.push(LabelPage);
   }
 
   goToList() {

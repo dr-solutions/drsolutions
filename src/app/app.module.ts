@@ -52,6 +52,9 @@ import { HomePageModule } from '../pages/home/home.module';
 import { ItemPage } from '../pages/item/item';
 import { ItemRecorderPage } from '../pages/item-recorder/item-recorder';
 import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
+import { KeyboardPage } from '../pages/keyboard/keyboard';
+import { LabelPage } from '../pages/label/label';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,8 @@ import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
     ItemPage,
     ItemRecorderPage,
     ItemSlidingPage,
+    KeyboardPage,
+    LabelPage,
     TerminPage,
     TerminSubPage
   ],
@@ -126,6 +131,8 @@ import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
     ItemPage,
     ItemRecorderPage,
     ItemSlidingPage,
+    KeyboardPage,
+    LabelPage,
     TerminPage,
     TerminSubPage
   ],
@@ -137,7 +144,8 @@ import { ItemSlidingPage } from '../pages/item-sliding/item-sliding';
     BenutzerProvider,
     RandomIntProvider,
     LaenderProvider,
-    TerminProvider
+    TerminProvider,
+    DatePipe
   ]
 })
 export class AppModule {}

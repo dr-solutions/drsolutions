@@ -1,13 +1,7 @@
-<!--
-  Generated template for the ListPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>list</ion-title>
+    <ion-title>List und Storage Beispiel</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,14 +9,84 @@
 
 <ion-content padding>
 
+  <ion-row>Avatar (clicking) List:</ion-row>
   <ion-list>
-    <ion-item *ngFor="let benutzer of benutzerList">
+    <ion-item *ngFor="let benutzer of benutzerList" (click)="itemSelected(benutzer)">
       <ion-avatar item-left>
         <img src="{{ benutzer.picture.thumbnail }}">
       </ion-avatar>
-      {{ benutzer.name.first }} 
-      {{ benutzer.name.last }} 
+      {{ benutzer.name.first }} {{ benutzer.name.last }}
     </ion-item>
   </ion-list>
+
+  <ion-row>No-line List:</ion-row>
+  <ion-list no-lines>
+    <ion-item *ngFor="let benutzer of benutzerList" (click)="itemSelected(benutzer)">
+      <ion-avatar item-left>
+        <img src="{{ benutzer.picture.thumbnail }}">
+      </ion-avatar>
+      {{ benutzer.name.first }} {{ benutzer.name.last }}
+    </ion-item>
+  </ion-list>
+
+  <ion-row>Inset List:</ion-row>
+  <ion-list inset>
+    <ion-item *ngFor="let benutzer of benutzerList" (click)="itemSelected(benutzer)">
+      <ion-avatar item-left>
+        <img src="{{ benutzer.picture.thumbnail }}">
+      </ion-avatar>
+      {{ benutzer.name.first }} {{ benutzer.name.last }}
+    </ion-item>
+  </ion-list>
+
+  <ion-row>Divider List:</ion-row>
+  <ion-item-group>
+    <ion-item>Item 1</ion-item>
+    <ion-item-divider color="primary">Item Divider 1</ion-item-divider>
+    <ion-item>Item 2</ion-item>
+    <ion-item>Item 3</ion-item>
+    <ion-item-divider>Item Divider 2</ion-item-divider>
+    <ion-item>Item 4</ion-item>
+  </ion-item-group>
+
+  <ion-row>Überschrift List:</ion-row>
+  <ion-list no-lines>
+    <ion-list-header>
+      Benutzer Überschrift
+    </ion-list-header>
+    <ion-item *ngFor="let benutzer of benutzerList" (click)="itemSelected(benutzer)">
+      <ion-avatar item-left>
+        <img src="{{ benutzer.picture.thumbnail }}">
+      </ion-avatar>
+      {{ benutzer.name.first }} {{ benutzer.name.last }}
+    </ion-item>
+  </ion-list>
+
+  <ion-row>Icon List:</ion-row>
+  <ion-list>
+    <ion-item>
+      <ion-icon large name="leaf" item-start></ion-icon>
+      Item 1
+      <ion-icon name="rose" item-end></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="rose" item-start></ion-icon>
+      Item 1
+      <ion-icon large name="leaf" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>Multiple Line List:</ion-row>
+  <ion-list>
+    <ion-item>
+      <ion-icon large name="ice-cream" item-start></ion-icon>
+      <h2>Mehrere Zeilen</h2>
+      <h3>sind natürlich</h3>
+      <p>genauso möglich und auch ziemlich cool</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-row>Sliding List:</ion-row>
+  <button ion-button outline (click)="goToSlidingPage()">Item Sliding</button>
 
 </ion-content>
