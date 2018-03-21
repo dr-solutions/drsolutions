@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Img Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-item *ngFor="let flagge of flaggen" color="nigger">
+    <ion-img  src="{{ flagge }}"
+              height="80"
+              width="160"
+              cache="true">
+    </ion-img>
+    <!-- fter an image has been successfully downloaded, it can be cached in-memory. 
+    This is useful for VirtualScroll by allowing image responses to be cached, 
+    and not rendered, until after scrolling has completed, which allows for smoother scrolling. -->
+  </ion-item>
+
+</ion-content>

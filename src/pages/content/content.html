@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Content Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>
+    <button ion-button icon-left color="btnColor" (click)="toBottom()">
+      <ion-icon name="ice-cream"></ion-icon>
+      Zum Schluss
+    </button>
+  </ion-row>
+
+  <ion-list *ngFor="let land of laender">
+    <ion-item>{{ land.name }}</ion-item>
+  </ion-list>
+
+  <ion-row>
+    <button ion-button icon-left color="btnColor" (click)="toTop()">
+      <ion-icon name="ice-cream"></ion-icon>
+      Zum Start
+    </button>
+  </ion-row>
+
+</ion-content>

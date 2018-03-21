@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chip Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-chip>
+    <ion-label>Default Chip</ion-label>
+  </ion-chip>
+    
+  <ion-chip>
+    <ion-label color="secondary">Color Label</ion-label>
+  </ion-chip>
+    
+  <ion-chip color="secondary">
+    <ion-label color="dark">Color Label und Chip</ion-label>
+  </ion-chip>
+    
+  <ion-chip>
+    <ion-icon name="ice-cream"></ion-icon>
+    <ion-label>Mit Icon</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-icon name="ice-cream" color="secondary"></ion-icon>
+    <ion-label>Mit Color Icon</ion-label>
+  </ion-chip>
+  
+  <ion-chip>
+    <ion-icon name="ice-cream"></ion-icon>
+  </ion-chip>
+
+  <ion-chip color="nigger" (click)="showMessage()">
+    <ion-label color="white">Kann auch geklickt werden</ion-label>
+    <ion-icon name="ice-cream" color="secondary"></ion-icon>
+  </ion-chip>
+
+  <ion-row *ngIf="show">Überraschung</ion-row>
+
+</ion-content>

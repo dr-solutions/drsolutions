@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Avatar Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let land of laender">
+      <ion-avatar item-start>
+        <img src="{{ land.flag }}">
+      </ion-avatar>
+      {{ land.alpha3Code }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

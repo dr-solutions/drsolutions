@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Badge Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item *ngFor="let land of laender">
+    <img src="{{ land.flag }}" item-start/>
+    {{ land .name }} 
+    <ion-row>
+      Einwohnerzahl:
+    </ion-row>
+    <ion-badge item-end color="btnColor">
+      {{ land.population | number }}
+    </ion-badge>
+  </ion-item>
+</ion-content>

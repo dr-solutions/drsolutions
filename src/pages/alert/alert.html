@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Alert Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button block primary (click)="showBasicAlert()">Basis Alert</button>
+
+  <button ion-button block primary (click)="showCheckboxAlert()">Checkbox Alert</button>
+
+  <button ion-button block primary (click)="showRadioAlert()">Radio Alert</button>
+
+  <button ion-button block primary (click)="showConfirmAlert()">Confirm Alert</button>
+  
+  <button ion-button block primary (click)="showPromptAlert()">Prompt Alert</button>
+
+  <ion-row>
+      Checkbox Ergebnisse: {{ testCheckboxResult }}
+  </ion-row>
+
+  <ion-row>
+      Radio Ergebnis: {{ testRadioResult }}
+  </ion-row>
+
+  <ion-row>
+      Confirm Ergebnis: {{ testConfirmResult }}
+  </ion-row>
+
+  <ion-row>
+      Prompt Ergebnisse: {{ titel }}
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Item Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>Buttons und Links die klickbar sind sollten einen Pfeil haben</ion-row>
+
+  <ion-row>Item wird meistens in Liste verwendet</ion-row>
+
+  <ion-item>
+    Item
+  </ion-item>
+
+  <ion-list-header>
+    List Header
+  </ion-list-header>
+
+  <ion-item-divider>
+    Item Divider
+  </ion-item-divider>
+
+  <button ion-item (click)="buttonClick()">
+    Button Item
+  </button>
+
+  <a ion-item href="https://www.ionicframework.com">
+    Link Item
+  </a>
+
+  <ion-item detail-push>
+    Item with Detail Arrow
+  </ion-item>
+
+  <button ion-item detail-none (click)="buttonClick()">
+    Button Item with no Detail Arrow
+  </button>
+
+  <ion-item no-lines>
+    Item with no border
+  </ion-item>
+
+  <ion-item text-wrap>
+    Multiline text that should wrap when it is too long to fit on one line in the item.
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Item Label
+    </ion-label>
+    <div item-content>
+      Item Content next to the label
+    </div>
+  </ion-item>
+</ion-content>

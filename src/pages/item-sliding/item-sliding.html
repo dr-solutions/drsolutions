@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Item Sliding Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngFor="let land of items">
+    <ion-item-sliding #item (ionDrag)="onDrag($event)" (ionSwipe)="delete($event, land)">
+      <ion-item>
+        <img src="{{ land.flag }}" width="40" height="20"> {{ land.name }}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button (click)="teilen(item)">
+          <ion-icon name="share"></ion-icon>
+          Teilen
+        </button>
+        <button ion-button (click)="gelesen(item, land.name)">Gelesen</button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button expandable color="primary" (click)="delete(item, land)">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-item *ngFor="let gelesenesLand of geleseneLaender">
+    {{ gelesenesLand }} wurde gelesen!
+  </ion-item>
+
+</ion-content>

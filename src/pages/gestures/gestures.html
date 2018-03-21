@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Gestures Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card (tap)="tapEvent($event)"
+            (press)="pressEvent($event)"
+            (pan)="panEvent($event)"
+            (swipe)="swipeEvent($event)"
+            (rotate)="rotateEvent($event)"
+            (pinch)="pinchEvent($event)"
+            class="myCard">
+    <ion-item color="primary">
+      Tapped: {{tap}} times
+    </ion-item>
+    
+    <ion-item color="primary">
+      Pressed: {{press}} times
+    </ion-item>
+
+    <ion-item color="primary">
+      Panned: {{pan}} times
+    </ion-item>
+    
+    <ion-item color="primary">
+      Swiped: {{swipe}} times
+    </ion-item>
+    
+    <ion-item color="primary">
+      Rotated: {{rotate}} times
+    </ion-item>
+    
+    <ion-item color="primary">
+      Pinched: {{pinch}} times
+    </ion-item>
+  </ion-card>
+
+</ion-content>

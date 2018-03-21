@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="operation === 'erstellen'">Termin Erstellung</ion-title>
+    <ion-title *ngIf="operation === 'bearbeiten'">Termin Bearbeitung</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="operation === 'erstellen'">
+    <ion-card-header>
+      Termin erstellen
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="submitTerminErstellungs()" [formGroup]="terminErstellungsForm">
+        <ion-list>
+          <ion-item>
+            <ion-label for="bezeichnung" floating>Bezeichnung</ion-label>
+            <ion-input formControlName="bezeichnung" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="beiteiligtePersonen" floating>Beteiligte</ion-label>
+            <ion-input formControlName="beiteiligtePersonen" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-datetime displayFormat="DD.MM.YYYY"
+                          formControlName="zeitpunkt"
+                          placeholder="Zeitpunkt auswählen"
+                          min="2017"
+                          max="2020"
+                          cancelText="Abbrechen"
+                          doneText="Zeitpunkt übernehmen"></ion-datetime>
+          </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" 
+                [disabled]="!terminErstellungsForm.valid">
+          Termin erstellen
+        </button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="operation === 'bearbeiten'">
+    <ion-card-header>
+      Termin bearbeiten
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="submitTerminBearbeitung()" [formGroup]="terminBearbeitungsForm">
+        <ion-list>
+          <ion-item>
+            <ion-label for="bezeichnung" floating>Bezeichnung</ion-label>
+            <ion-input formControlName="bezeichnung" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="beiteiligtePersonen" floating>Beteiligte</ion-label>
+            <ion-input formControlName="beiteiligtePersonen" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-datetime displayFormat="DD.MM.YYYY"
+                          formControlName="zeitpunkt"
+                          placeholder="Zeitpunkt auswählen"
+                          min="2017"
+                          max="2020"
+                          cancelText="Abbrechen"
+                          doneText="Zeitpunkt übernehmen"></ion-datetime>
+          </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" 
+                [disabled]="!terminBearbeitungsForm.valid">
+          Termin bearbeiten
+        </button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
