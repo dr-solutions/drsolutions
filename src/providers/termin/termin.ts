@@ -2,36 +2,38 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 // import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Termin } from '../../interfaces/termin/termin';
+import { HttpConstants } from '../httpConstants/httpConstants';
 
 @Injectable()
-export class TerminProvider {  
+export class TerminProvider {
+  readonly API = HttpConstants.RENES_IP_API;
 
   constructor(public httpClient: HttpClient) {
     console.log('Hello TerminProvider Provider');
   }
 
   getTermine() {
-    return this.httpClient.get('http://localhost:8080/dr-solutions/rest/backendService/getAllTermine')
+    return this.httpClient.get(this.API + 'getAllTermine')
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminErstellen(termin: Termin) {
-    return this.httpClient.post<Termin>('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
+    return this.httpClient.post<Termin>(this.API +'saveOrUpdateTermin', 
       termin)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminAendern(termin: Termin) {
-    return this.httpClient.post<Termin>('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', 
+    return this.httpClient.post<Termin>(this.API + 'saveOrUpdateTermin', 
       termin)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminLoeschen(id: number) {
-    return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/deleteTermin', id)
+    return this.httpClient.post(this.API + 'deleteTermin', id)
     .map(this._mapDataToTermine)
   }
 

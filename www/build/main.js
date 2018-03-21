@@ -7,6 +7,7 @@ webpackJsonp([0],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TerminProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__ = __webpack_require__(330);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,28 +19,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var TerminProvider = (function () {
     function TerminProvider(httpClient) {
         this.httpClient = httpClient;
+        this.API = __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__["a" /* HttpConstants */].RENES_IP_API;
         console.log('Hello TerminProvider Provider');
     }
     TerminProvider.prototype.getTermine = function () {
-        return this.httpClient.get('http://localhost:8080/dr-solutions/rest/backendService/getAllTermine')
+        return this.httpClient.get(this.API + 'getAllTermine')
             .do(this._logResponse)
             .map(this._mapDataToTermine);
     };
     TerminProvider.prototype.terminErstellen = function (termin) {
-        return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', termin)
+        return this.httpClient.post(this.API + 'saveOrUpdateTermin', termin)
             .do(this._logResponse)
             .map(this._mapDataToTermine);
     };
     TerminProvider.prototype.terminAendern = function (termin) {
-        return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/saveOrUpdateTermin', termin)
+        return this.httpClient.post(this.API + 'saveOrUpdateTermin', termin)
             .do(this._logResponse)
             .map(this._mapDataToTermine);
     };
     TerminProvider.prototype.terminLoeschen = function (id) {
-        return this.httpClient.post('http://localhost:8080/dr-solutions/rest/backendService/deleteTermin', id)
+        return this.httpClient.post(this.API + 'deleteTermin', id)
             .map(this._mapDataToTermine);
     };
     TerminProvider.prototype._logResponse = function (res) {
@@ -50,9 +53,10 @@ var TerminProvider = (function () {
     };
     TerminProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], TerminProvider);
     return TerminProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=termin.js.map
@@ -2707,6 +2711,23 @@ var MyErrorHandler = (function () {
 }());
 
 //# sourceMappingURL=myErrorHandler.js.map
+
+/***/ }),
+
+/***/ 330:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpConstants; });
+var HttpConstants = (function () {
+    function HttpConstants() {
+    }
+    HttpConstants.LOCALHOST_API = 'http://localhost:8080/dr-solutions/rest/backendService/';
+    HttpConstants.RENES_IP_API = 'http://192.168.1.9:8080/dr-solutions/rest/backendService/';
+    return HttpConstants;
+}());
+
+//# sourceMappingURL=httpConstants.js.map
 
 /***/ }),
 
