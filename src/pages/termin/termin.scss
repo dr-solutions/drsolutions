@@ -1,2 +1,21 @@
 page-termin {
+    .width {
+        width: 96%;
+    }
+
+    .roundCorner {
+        border-radius: 10px;
+    } 
+
+    ion-label {
+        color:  color($colors, text-grey);
+    }
+
+    ion-card-content .card-title-ios {
+        padding: 0;
+    }
+
+    ion-card-content .label-ios {
+        margin: 11px 8px 1px 0;
+    }
 }

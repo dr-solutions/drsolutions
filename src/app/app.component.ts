@@ -13,7 +13,7 @@ import { TerminPage } from '../pages/termin/termin';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = TerminPage;
 
   pages: Array<{title: string, component: any}>;
 
