@@ -56,6 +56,7 @@ import { KeyboardPage } from '../pages/keyboard/keyboard';
 import { LabelPage } from '../pages/label/label';
 import { DatePipe } from '@angular/common';
 import { LoadingPage } from '../pages/loading/loading';
+import { KontaktPage } from '../pages/kontakt/kontakt';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { LoadingPage } from '../pages/loading/loading';
     LabelPage,
     LoadingPage,
     TerminPage,
-    TerminSubPage
+    TerminSubPage,
+    KontaktPage
   ],
   imports: [
     HomePageModule,
@@ -137,7 +139,8 @@ import { LoadingPage } from '../pages/loading/loading';
     LabelPage,
     LoadingPage,
     TerminPage,
-    TerminSubPage
+    TerminSubPage,
+    KontaktPage
   ],
   providers: [        
     // {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true},
