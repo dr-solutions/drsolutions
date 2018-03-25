@@ -2,7 +2,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -56,6 +56,8 @@ import { KeyboardPage } from '../pages/keyboard/keyboard';
 import { LabelPage } from '../pages/label/label';
 import { DatePipe } from '@angular/common';
 import { LoadingPage } from '../pages/loading/loading';
+import { PersonProvider } from '../providers/person/person';
+import { MyHttpInterceptor, DEFAULT_TIMEOUT, defaultTimeout } from '../providers/interceptor/myHttpInterceptor';
 
 @NgModule({
   declarations: [
@@ -140,15 +142,19 @@ import { LoadingPage } from '../pages/loading/loading';
     TerminSubPage
   ],
   providers: [        
-    // {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true},
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: MyErrorHandler},
+    [
+      {provide: ErrorHandler, useClass: MyErrorHandler}, 
+      {provide: HTTP_INTERCEPTORS, useClass: MyHttpInterceptor, multi: true},
+      {provide: DEFAULT_TIMEOUT, useValue: defaultTimeout}
+    ],
     BenutzerProvider,
     RandomIntProvider,
     LaenderProvider,
     TerminProvider,
-    DatePipe
+    DatePipe,
+    PersonProvider
   ]
 })
 export class AppModule {}

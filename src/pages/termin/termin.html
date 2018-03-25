@@ -34,10 +34,15 @@
         </ion-row>
       </ion-list-header>
       <ion-row>
-        <ion-item>Beteiligte: {{ termin.beteiligtePersonen }}</ion-item>
+        <ion-list>
+          <ion-list-header>
+            Beteiligte Personen
+          </ion-list-header>
+          <ion-item *ngFor="let personen of termin.beteiligtePersonen">{{personen.label}}</ion-item>
+        </ion-list>
       </ion-row>
       <ion-row>
-        <ion-item>Zeitpunkt: {{ termin.zeitpunt | date:'dd.MM.yyyy'}}</ion-item>
+        <ion-item>Zeitpunkt: {{ termin.zeitpunkt | date:'dd.MM.yyyy'}}</ion-item>
       </ion-row>
       <ion-row>
         <ion-col col-6>

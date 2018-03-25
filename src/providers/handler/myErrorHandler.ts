@@ -19,6 +19,12 @@ export class MyErrorHandler implements ErrorHandler {
       cssClass: 'fehlerToast',
       duration: 5000
     });
+    const timeoutToast = this.toastCtrl.create({
+      message: 'Request Timeout',
+      position: 'middle',
+      cssClass: 'fehlerToast',
+      duration: 5000
+    });
 
     if (error.status === 500) {
       backendExceptionToast.present();
@@ -30,7 +36,10 @@ export class MyErrorHandler implements ErrorHandler {
       return;
     }
 
-    throw error;
+    if (error.message === 'Timeout has occurred' && error.name === 'TimeoutError') {
+      timeoutToast.present();
+      return;
+    }
   }
 
 }

@@ -22,20 +22,20 @@
           </ion-item>
           <ion-item>
             <ion-label for="beiteiligtePersonen" floating>Beteiligte</ion-label>
-            <ion-input formControlName="beiteiligtePersonen" type="text"></ion-input>
+            <ion-select formControlName="beiteiligtePersonen" multiple="true">
+              <ion-option *ngFor="let beteiligtePerson of personen" 
+                          [value]="beteiligtePerson.value" 
+                          [selected]="beteiligtePerson.selected">
+                {{ beteiligtePerson.label }}
+              </ion-option>
+            </ion-select>
           </ion-item>
           <ion-item>
-            <ion-datetime displayFormat="DD.MM.YYYY"
-                          formControlName="zeitpunkt"
-                          placeholder="Zeitpunkt auswählen"
-                          min="2017"
-                          max="2020"
-                          cancelText="Abbrechen"
-                          doneText="Zeitpunkt übernehmen"></ion-datetime>
+            <ion-datetime displayFormat="DD.MM.YYYY" formControlName="zeitpunkt" placeholder="Zeitpunkt auswählen" min="2017" max="2020"
+              cancelText="Abbrechen" doneText="Zeitpunkt übernehmen"></ion-datetime>
           </ion-item>
         </ion-list>
-        <button ion-button block type="submit" 
-                [disabled]="!terminErstellungsForm.valid">
+        <button ion-button block type="submit" [disabled]="!terminErstellungsForm.valid">
           Termin erstellen
         </button>
       </form>
@@ -58,17 +58,11 @@
             <ion-input formControlName="beiteiligtePersonen" type="text"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-datetime displayFormat="DD.MM.YYYY"
-                          formControlName="zeitpunkt"
-                          placeholder="Zeitpunkt auswählen"
-                          min="2017"
-                          max="2020"
-                          cancelText="Abbrechen"
-                          doneText="Zeitpunkt übernehmen"></ion-datetime>
+            <ion-datetime displayFormat="DD.MM.YYYY" formControlName="zeitpunkt" placeholder="Zeitpunkt auswählen" min="2017" max="2020"
+              cancelText="Abbrechen" doneText="Zeitpunkt übernehmen"></ion-datetime>
           </ion-item>
         </ion-list>
-        <button ion-button block type="submit" 
-                [disabled]="!terminBearbeitungsForm.valid">
+        <button ion-button block type="submit" [disabled]="!terminBearbeitungsForm.valid">
           Termin bearbeiten
         </button>
       </form>

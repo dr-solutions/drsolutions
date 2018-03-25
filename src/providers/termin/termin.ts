@@ -9,7 +9,6 @@ export class TerminProvider {
   readonly API = HttpConstants.RENES_IP_API;
 
   constructor(public httpClient: HttpClient) {
-    console.log('Hello TerminProvider Provider');
   }
 
   getTermine() {

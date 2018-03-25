@@ -34,6 +34,12 @@ export class TerminPage {
   }
 
   goToTerminBearbeitung(termin) {
+    // TODO: Alle Personen lesen
+    // eigene Page TerminBearbeitung und TerminErstellung
+    // bei allen Personen müssen die schon selektierten selektiert werden 
+    // dann gehts ab zur Terminbearbeitung mit allen Personen
+    // es werde aber e nur die selektieren angezeigt
+    // ausgewählt können aber alle werden.
     this.navCtrl.push(TerminSubPage, { termin: termin, operation: 'bearbeiten' });
   }
 

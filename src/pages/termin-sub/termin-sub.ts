@@ -3,6 +3,8 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Termin } from '../../interfaces/termin/termin';
 import { TerminProvider } from '../../providers/termin/termin';
+import { PersonProvider } from '../../providers/person/person';
+import { PersonSelect } from '../../interfaces/person/personSelect';
 
 @Component({
   selector: 'page-termin-sub',
@@ -14,18 +16,20 @@ export class TerminSubPage {
   terminErstellungsForm: FormGroup;
   terminBearbeitungsForm: FormGroup;
   minDate: Date;
+  personen: PersonSelect[];
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public toastCtrl: ToastController,
               public formBuilder: FormBuilder,
-              public terminProvider: TerminProvider) {
+              public terminProvider: TerminProvider,
+              public personProvider: PersonProvider) {
     this.operation = this.navParams.get("operation");  
     this.termin = this.navParams.get('termin'); 
 
     this.terminErstellungsForm = formBuilder.group({
-      bezeichnung: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
-      beiteiligtePersonen: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+      bezeichnung: ['', Validators.required],
+      beiteiligtePersonen: ['', Validators.required],
       zeitpunkt: ['', Validators.required]
     });
     
@@ -36,11 +40,14 @@ export class TerminSubPage {
     });
 
     if (this.operation === 'bearbeiten' && this.termin) {
-      console.log('hallo', this.termin);
       this.terminBearbeitungsForm.patchValue({'bezeichnung': this.termin.bezeichnung});
       this.terminBearbeitungsForm.patchValue({'beiteiligtePersonen': this.termin.beteiligtePersonen});
-      this.terminBearbeitungsForm.patchValue({'zeitpunkt': this.termin.zeitpunt});
+      this.terminBearbeitungsForm.patchValue({'zeitpunkt': this.termin.zeitpunkt});
     }
+
+    this.personProvider.getPersonen().subscribe((personen: PersonSelect[]) => {
+      this.personen = personen;
+    });
   }
 
   submitTerminErstellungs() {
@@ -53,7 +60,7 @@ export class TerminSubPage {
       const termin: Termin = {
         'bezeichnung': bezeichnung,
         'beteiligtePersonen': beteiligte,
-        'zeitpunt': zeitpunkt
+        'zeitpunkt': zeitpunkt
       }
 
       this.terminProvider.terminErstellen(termin).subscribe((termine: Termin[]) => {
@@ -81,7 +88,7 @@ export class TerminSubPage {
         'id': this.termin.id,
         'bezeichnung': bezeichnung,
         'beteiligtePersonen': beteiligte,
-        'zeitpunt': zeitpunkt
+        'zeitpunkt': zeitpunkt
       }
 
       this.terminProvider.terminAendern(termin).subscribe((termine: Termin[]) => {
