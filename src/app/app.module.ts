@@ -41,7 +41,7 @@ import { InfiniteScrollPage } from '../pages/infinite-scroll/infinite-scroll';
 import { InputPage } from '../pages/input/input';
 import { TerminProvider } from '../providers/termin/termin';
 import { TerminPage } from '../pages/termin/termin';
-import { TerminSubPage } from '../pages/termin-sub/termin-sub';
+import { TerminErstellungPage } from '../pages/termin-erstellung/termin-erstellung';
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/catch";
@@ -58,6 +58,7 @@ import { DatePipe } from '@angular/common';
 import { LoadingPage } from '../pages/loading/loading';
 import { PersonProvider } from '../providers/person/person';
 import { MyHttpInterceptor, DEFAULT_TIMEOUT, defaultTimeout } from '../providers/interceptor/myHttpInterceptor';
+import { TerminBearbeitungPage } from '../pages/termin-bearbeitung/termin-bearbeitung';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { MyHttpInterceptor, DEFAULT_TIMEOUT, defaultTimeout } from '../providers
     LabelPage,
     LoadingPage,
     TerminPage,
-    TerminSubPage
+    TerminErstellungPage,
+    TerminBearbeitungPage
   ],
   imports: [
     HomePageModule,
@@ -139,7 +141,8 @@ import { MyHttpInterceptor, DEFAULT_TIMEOUT, defaultTimeout } from '../providers
     LabelPage,
     LoadingPage,
     TerminPage,
-    TerminSubPage
+    TerminErstellungPage,
+    TerminBearbeitungPage
   ],
   providers: [        
     StatusBar,

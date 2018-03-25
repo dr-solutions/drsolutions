@@ -1,5 +1,5 @@
 export interface PersonSelect {
-    value?: string;
+    value?: number;
     label?: string;
     selected?: boolean;
 }

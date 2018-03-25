@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { TerminProvider } from '../../providers/termin/termin';
 import { Termin } from '../../interfaces/termin/termin';
-import { TerminSubPage } from '../termin-sub/termin-sub';
+import { TerminErstellungPage } from '../termin-erstellung/termin-erstellung';
+import { TerminBearbeitungPage } from '../termin-bearbeitung/termin-bearbeitung';
+import { PersonProvider } from '../../providers/person/person';
+import { PersonSelect } from '../../interfaces/person/personSelect';
 
 @Component({
   selector: 'page-termin',
@@ -15,14 +18,11 @@ export class TerminPage {
     public navParams: NavParams,
     public toastCtrl: ToastController,
     public alertCtrl: AlertController,
-    public terminProvider: TerminProvider) {
-    this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
-      console.log('Das sind alle Termine: ', termine);
-      this.termine = termine;
-    });
+    public terminProvider: TerminProvider,
+    public personProvider: PersonProvider) {
   }
 
-  ionViewDidEnter() {
+  ionViewWillEnter() {
     this.terminProvider.getTermine().subscribe((termine: Termin[]) => {
       console.log('Das sind alle Termine: ', termine);
       this.termine = termine;
@@ -30,17 +30,13 @@ export class TerminPage {
   }
 
   goToTerminErstellung() {
-    this.navCtrl.push(TerminSubPage, { operation: 'erstellen' });
+    this.navCtrl.push(TerminErstellungPage);
   }
 
-  goToTerminBearbeitung(termin) {
-    // TODO: Alle Personen lesen
-    // eigene Page TerminBearbeitung und TerminErstellung
-    // bei allen Personen müssen die schon selektierten selektiert werden 
-    // dann gehts ab zur Terminbearbeitung mit allen Personen
-    // es werde aber e nur die selektieren angezeigt
-    // ausgewählt können aber alle werden.
-    this.navCtrl.push(TerminSubPage, { termin: termin, operation: 'bearbeiten' });
+  goToTerminBearbeitung(termin: Termin) {
+    this.personProvider.getPersonen().subscribe((personen: PersonSelect[]) => {
+      this.navCtrl.push(TerminBearbeitungPage, { termin: termin, personen: personen});
+    });
   }
 
   showConfirmation(id) {
