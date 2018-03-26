@@ -1,0 +1,140 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Platform Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-5>dir():</ion-col>
+    <ion-col col-7>{{ dir }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>width():</ion-col>
+    <ion-col col-7>{{ width }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>height():</ion-col>
+    <ion-col col-7>{{ height }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('android'):</ion-col>
+    <ion-col col-7>{{ android }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('ios'):</ion-col>
+    <ion-col col-7>{{ ios }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('ipad'):</ion-col>
+    <ion-col col-7>{{ ipad }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('iphone'):</ion-col>
+    <ion-col col-7>{{ iphone }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('mobile'):</ion-col>
+    <ion-col col-7>{{ mobile }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('mobileweb'):</ion-col>
+    <ion-col col-7>{{ mobileweb }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('phablet'):</ion-col>
+    <ion-col col-7>{{ phablet }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('tablet'):</ion-col>
+    <ion-col col-7>{{ tablet }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('windows'):</ion-col>
+    <ion-col col-7>{{ windows }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('core'):</ion-col>
+    <ion-col col-7>{{ core }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>is('cordova'):</ion-col>
+    <ion-col col-7>{{ cordova }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>isLandscape():</ion-col>
+    <ion-col col-7>{{ landscape }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>isPortrait():</ion-col>
+    <ion-col col-7>{{ portrait }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>lang():</ion-col>
+    <ion-col col-7>{{ lang }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>platforms():</ion-col>
+    <ion-col col-7>returns all active platforms z.B.: ios, iphone and mobile</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>ready():</ion-col>
+    <ion-col col-7>
+      <a href="https://ionicframework.com/docs/api/platform/Platform/#ready">siehe Ready</a>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>registerBackButtonAction(fn, priority):</ion-col>
+    <ion-col col-7>Funktion (fn) wird ausgeführt, wenn der 'Hardware' Back Button gedrückt wird (nur android und windows). Default Priority
+      0. Nur die höchste wird ausgeführt</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>registerBackButtonAction(fn, priority):</ion-col>
+    <ion-col col-7>Funktion (fn) wird ausgeführt, wenn der 'Hardware' Back Button gedrückt wird (nur android und windows). Default Priority
+      0. Nur die höchste wird ausgeführt</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>setDir(dir, updateDocument):</ion-col>
+    <ion-col col-7>rtl oder ltr und true oder false</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>setLang(language, updateDocument):</ion-col>
+    <ion-col col-7>z.B.: de oder en-GB und true oder false</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>url():</ion-col>
+    <ion-col col-7>{{ url }}</ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-5>versions():</ion-col>
+    <ion-col col-7>siehe console</ion-col>
+  </ion-row>
+
+</ion-content>

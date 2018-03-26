@@ -64,6 +64,8 @@ import { ModalExample1Page } from '../pages/modal-example1/modal-example1';
 import { ModalExample2Page } from '../pages/modal-example2/modal-example2';
 import { NavPage } from '../pages/nav/nav';
 import { SelectPage } from '../pages/select/select';
+import { NotePage } from '../pages/note/note';
+import { PlatformPage } from '../pages/platform/platform';
 
 @NgModule({
   declarations: [
@@ -103,6 +105,8 @@ import { SelectPage } from '../pages/select/select';
     ModalExample1Page,
     ModalExample2Page,
     NavPage,
+    NotePage,
+    PlatformPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -154,6 +158,8 @@ import { SelectPage } from '../pages/select/select';
     ModalExample1Page,
     ModalExample2Page,
     NavPage,
+    NotePage,
+    PlatformPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,

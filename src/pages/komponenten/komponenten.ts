@@ -32,6 +32,8 @@ import { LoadingPage } from '../loading/loading';
 import { ModalPage } from '../modal/modal';
 import { NavPage } from '../nav/nav';
 import { SelectPage } from '../select/select';
+import { NotePage } from '../note/note';
+import { PlatformPage } from '../platform/platform';
 
 @Component({
   selector: 'page-komponenten',
@@ -172,11 +174,11 @@ export class KomponentenPage {
   }
 
   goToNote() {
-
+    this.navCtrl.push(NotePage);
   }
 
   goToPlatform() {
-
+    this.navCtrl.push(PlatformPage);
   }
 
   goToPlatformConfigToken() {
