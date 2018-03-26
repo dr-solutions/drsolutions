@@ -59,6 +59,11 @@ import { LoadingPage } from '../pages/loading/loading';
 import { PersonProvider } from '../providers/person/person';
 import { MyHttpInterceptor, DEFAULT_TIMEOUT, defaultTimeout } from '../providers/interceptor/myHttpInterceptor';
 import { TerminBearbeitungPage } from '../pages/termin-bearbeitung/termin-bearbeitung';
+import { ModalPage } from '../pages/modal/modal';
+import { ModalExample1Page } from '../pages/modal-example1/modal-example1';
+import { ModalExample2Page } from '../pages/modal-example2/modal-example2';
+import { NavPage } from '../pages/nav/nav';
+import { SelectPage } from '../pages/select/select';
 
 @NgModule({
   declarations: [
@@ -94,6 +99,11 @@ import { TerminBearbeitungPage } from '../pages/termin-bearbeitung/termin-bearbe
     KeyboardPage,
     LabelPage,
     LoadingPage,
+    ModalPage,
+    ModalExample1Page,
+    ModalExample2Page,
+    NavPage,
+    SelectPage,
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage
@@ -140,6 +150,11 @@ import { TerminBearbeitungPage } from '../pages/termin-bearbeitung/termin-bearbe
     KeyboardPage,
     LabelPage,
     LoadingPage,
+    ModalPage,
+    ModalExample1Page,
+    ModalExample2Page,
+    NavPage,
+    SelectPage,
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage

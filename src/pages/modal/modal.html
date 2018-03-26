@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Modal Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>
+    <button ion-button color="btnColor" outline (click)="openModal()">Modal öffnen</button>
+  </ion-row>
+
+  <ion-row>
+    <button ion-button color="btnColor" outline (click)="openModalWithParams()">Modal mit Params öffnen</button>
+  </ion-row>
+  <ion-row>Hier werden die Daten: id, vorname, nachname an den Modal übergeben</ion-row>
+  <ion-row>Id: {{data.id}}</ion-row>
+  <ion-row>
+    <ion-label>Vorname: {{data.vorname}}</ion-label>
+  </ion-row>
+  <ion-row>Nachname: {{data.nachname}}</ion-row>
+
+  <ion-row>Der Modal ändert den Vornamen beim Speichern Button</ion-row>
+
+
+  <ion-list>
+    <ion-list-header>
+      Historie der Vornamen
+    </ion-list-header>
+    <ion-item *ngFor="let vornamenHistorie of historie">{{ vornamenHistorie }}</ion-item>
+  </ion-list>
+
+</ion-content>

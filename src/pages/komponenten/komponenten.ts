@@ -29,6 +29,9 @@ import { ItemRecorderPage } from '../item-recorder/item-recorder';
 import { KeyboardPage } from '../keyboard/keyboard';
 import { LabelPage } from '../label/label';
 import { LoadingPage } from '../loading/loading';
+import { ModalPage } from '../modal/modal';
+import { NavPage } from '../nav/nav';
+import { SelectPage } from '../select/select';
 
 @Component({
   selector: 'page-komponenten',
@@ -160,55 +163,15 @@ export class KomponentenPage {
     this.navCtrl.push(LoadingPage);
   }
 
-  goToMenu() {
-
-  }
-
-  goToMenuClose() {
-
-  }
-
-  goToMenuController() {
-
-  }
-
-  goToMenuToggle() {
-
-  }
-
   goToModalController() {
-
+    this.navCtrl.push(ModalPage);
   }
 
   goToNav() {
-
-  }
-
-  goToNavbar() {
-
-  }
-
-  goToNavController() {
-
-  }
-
-  goToNavParams() {
-
-  }
-
-  goToNavPop() {
-
-  }
-
-  goToNavPush() {
-
+    this.navCtrl.push(NavPage);
   }
 
   goToNote() {
-
-  }
-
-  goToOption() {
 
   }
 
@@ -265,7 +228,7 @@ export class KomponentenPage {
   }
 
   goToSelect() {
-
+    this.navCtrl.push(SelectPage);
   }
 
   goToShowWhen() {
