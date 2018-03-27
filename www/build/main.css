@@ -43446,6 +43446,47 @@ ion-navbar.toolbar {
   color: #222;
 }
 
+popover-example .secondaryCircle {
+  position: relative;
+  top: 25%;
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  background: #32db64;
+}
+
+popover-example .dangerCircle {
+  position: relative;
+  top: 25%;
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  background: #f53d3d;
+}
+
+popover-example .niggerCircle {
+  position: relative;
+  top: 25%;
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  background: #532c00;
+}
+
+popover-example .primaryCircle {
+  position: relative;
+  top: 25%;
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  background: #ff9100;
+}
+
+popover-example .largeClose_icon {
+  font-size: 300%;
+  color: #f53d3d;
+}
+
 page-badge img {
   max-width: 10%;
 }
@@ -43491,4 +43532,8 @@ page-input .errorMessage {
 
 page-komponenten ion-col button {
   width: 100%;
+}
+
+page-popover .myIconSizedUp {
+  font-size: 4000%;
 }

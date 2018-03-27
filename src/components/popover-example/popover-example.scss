@@ -1,0 +1,44 @@
+popover-example {
+
+    .secondaryCircle {
+        position: relative;
+        top: 25%;
+        border-radius: 50%;
+        width: 3vh;
+        height: 3vh; 
+        background: color($colors, secondary);
+    }
+
+    .dangerCircle {
+        position: relative;
+        top: 25%;
+        border-radius: 50%;
+        width: 3vh;
+        height: 3vh; 
+        background: color($colors, danger);
+    }
+
+    .niggerCircle {
+        position: relative;
+        top: 25%;
+        border-radius: 50%;
+        width: 3vh;
+        height: 3vh; 
+        background: color($colors, nigger);
+    }
+
+    .primaryCircle {
+        position: relative;
+        top: 25%;
+        border-radius: 50%;
+        width: 3vh;
+        height: 3vh; 
+        background: color($colors, primary);
+    }
+
+    .largeClose_icon {
+        font-size: 300%;
+        color: color($colors, danger);
+    }
+
+}

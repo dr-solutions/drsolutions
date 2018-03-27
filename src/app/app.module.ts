@@ -66,6 +66,9 @@ import { NavPage } from '../pages/nav/nav';
 import { SelectPage } from '../pages/select/select';
 import { NotePage } from '../pages/note/note';
 import { PlatformPage } from '../pages/platform/platform';
+import { PlatformConfigTokenPage } from '../pages/platform-config-token/platform-config-token';
+import { PopoverPage } from '../pages/popover/popover';
+import { PopoverExampleComponent } from '../components/popover-example/popover-example';
 
 @NgModule({
   declarations: [
@@ -107,6 +110,9 @@ import { PlatformPage } from '../pages/platform/platform';
     NavPage,
     NotePage,
     PlatformPage,
+    PlatformConfigTokenPage,
+    PopoverPage,
+    PopoverExampleComponent,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -160,6 +166,9 @@ import { PlatformPage } from '../pages/platform/platform';
     NavPage,
     NotePage,
     PlatformPage,
+    PlatformConfigTokenPage,
+    PopoverPage,
+    PopoverExampleComponent,
     SelectPage,
     TerminPage,
     TerminErstellungPage,

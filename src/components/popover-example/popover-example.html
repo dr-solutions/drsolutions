@@ -1,0 +1,61 @@
+<ion-item-group>
+  <ion-item-divider></ion-item-divider>
+  <ion-row (click)="save('secondary')" align-self-center>
+    <ion-col offset-2 col-6>
+      <ion-label>Secondary</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <div class="secondaryCircle"></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-item-divider></ion-item-divider>
+  <ion-row (click)="save('danger')">
+    <ion-col offset-2 col-6>
+      <ion-label>Danger</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <div class="dangerCircle"></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-item-divider></ion-item-divider>
+  <ion-row (click)="save('nigger')">
+    <ion-col offset-2 col-6>
+      <ion-label>Nigger</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <div class="niggerCircle"></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-item-divider></ion-item-divider>
+  <ion-row (click)="save('primary')">
+    <ion-col offset-2 col-6>
+      <ion-label>Primary</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <div class="primaryCircle"></div>
+    </ion-col>
+  </ion-row>
+
+  <ion-item-divider></ion-item-divider>
+  <ion-row (click)="close()">
+    <ion-col offset-2 col-6>
+      <ion-label>Abbrechen</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-icon class="largeClose_icon" name="close"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-item-group>
+
+<!-- nicht so fancy :) -->
+<!-- <ion-list>
+  <ion-list-header>Farben ändern</ion-list-header>
+  <button ion-item (click)="save('secondary')">Secondary</button>
+  <button ion-item (click)="save('danger')">Danger</button>
+  <button ion-item (click)="save('nigger')">Nigger</button>
+  <button ion-item (click)="save('primary')">Primary</button>
+  <button ion-item (click)="close()">Abbrechen</button>
+</ion-list> -->

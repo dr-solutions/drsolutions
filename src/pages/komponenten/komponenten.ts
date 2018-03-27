@@ -34,6 +34,8 @@ import { NavPage } from '../nav/nav';
 import { SelectPage } from '../select/select';
 import { NotePage } from '../note/note';
 import { PlatformPage } from '../platform/platform';
+import { PlatformConfigTokenPage } from '../platform-config-token/platform-config-token';
+import { PopoverPage } from '../popover/popover';
 
 @Component({
   selector: 'page-komponenten',
@@ -182,11 +184,11 @@ export class KomponentenPage {
   }
 
   goToPlatformConfigToken() {
-
+    this.navCtrl.push(PlatformConfigTokenPage);
   }
 
   goToPopoverController() {
-
+    this.navCtrl.push(PopoverPage);
   }
 
   goToRadioButton() {
