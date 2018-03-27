@@ -36,6 +36,9 @@ import { NotePage } from '../note/note';
 import { PlatformPage } from '../platform/platform';
 import { PlatformConfigTokenPage } from '../platform-config-token/platform-config-token';
 import { PopoverPage } from '../popover/popover';
+import { RadioPage } from '../radio/radio';
+import { RadioGroupPage } from '../radio-group/radio-group';
+import { RangePage } from '../range/range';
 
 @Component({
   selector: 'page-komponenten',
@@ -192,15 +195,15 @@ export class KomponentenPage {
   }
 
   goToRadioButton() {
-
+    this.navCtrl.push(RadioPage);
   }
 
   goToRadioGroup() {
-
+    this.navCtrl.push(RadioGroupPage);
   }
 
   goToRange() {
-
+    this.navCtrl.push(RangePage);
   }
 
   goToRefresher() {

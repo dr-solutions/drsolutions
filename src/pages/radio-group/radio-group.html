@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RadioGroup Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="spracheForm">
+    <ion-list radio-group formControlName="sprache" (ionChange)="selectionChanged($event)">
+
+      <ion-list-header>
+        Sprachen
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Java</ion-label>
+        <ion-radio value="java" checked="true"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>C++</ion-label>
+        <ion-radio value="cPlusPlus"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Python</ion-label>
+        <ion-radio value="python"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>C</ion-label>
+        <ion-radio value="c"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <img src="https://i.imgur.com/OzGlXoP.jpg" *ngIf="getSelected('java')">
+    <img src="https://i.ytimg.com/vi/-HE9Dj9WuuY/maxresdefault.jpg" *ngIf="getSelected('cPlusPlus')">
+    <img src="https://qph.fs.quoracdn.net/main-qimg-6aacbbc7aab3db69e8945ce5ae5fb18b" *ngIf="getSelected('python')">
+    <img src="http://ds.arm.com/media/uploads/Working_With_ARM_DS5/Download-install-License/hello_world.c.png" *ngIf="getSelected('c')">
+
+    
+  </form>
+
+
+
+</ion-content>

@@ -69,6 +69,9 @@ import { PlatformPage } from '../pages/platform/platform';
 import { PlatformConfigTokenPage } from '../pages/platform-config-token/platform-config-token';
 import { PopoverPage } from '../pages/popover/popover';
 import { PopoverExampleComponent } from '../components/popover-example/popover-example';
+import { RadioPage } from '../pages/radio/radio';
+import { RadioGroupPage } from '../pages/radio-group/radio-group';
+import { RangePage } from '../pages/range/range';
 
 @NgModule({
   declarations: [
@@ -113,6 +116,9 @@ import { PopoverExampleComponent } from '../components/popover-example/popover-e
     PlatformConfigTokenPage,
     PopoverPage,
     PopoverExampleComponent,
+    RadioPage,
+    RadioGroupPage,
+    RangePage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -169,6 +175,9 @@ import { PopoverExampleComponent } from '../components/popover-example/popover-e
     PlatformConfigTokenPage,
     PopoverPage,
     PopoverExampleComponent,
+    RadioPage,
+    RadioGroupPage,
+    RangePage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,

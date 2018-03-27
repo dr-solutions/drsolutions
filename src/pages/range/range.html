@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Range Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-badge item-start color="btnColor">{{ brightness }}</ion-badge>
+      <ion-range [(ngModel)]="brightness">
+        <ion-icon range-left small name="sunny"></ion-icon>
+        <ion-icon range-right name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-badge item-start color="btnColor">{{ contrast }}</ion-badge>
+      <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" color="secondary">
+        <ion-icon range-left small name="contrast"></ion-icon>
+        <ion-icon range-right name="contrast"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-badge item-start color="btnColor">{{ structure.lower }}</ion-badge>
+      <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+        <ion-icon range-left small name="brush"></ion-icon>
+        <ion-icon range-right name="brush"></ion-icon>
+      </ion-range>
+      <ion-badge item-end color="btnColor">{{ structure.upper }}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-badge item-start color="btnColor">{{ warmth }}</ion-badge>
+      <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">
+        <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+        <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge item-start color="btnColor">{{ fontSize }}</ion-badge>
+      <ion-range  min="10" 
+                  max="22" 
+                  step="2" 
+                  snaps="true" 
+                  [(ngModel)]="fontSize" 
+                  debounce="1000"
+                  (ionChange)="rangeChanged($event)" 
+                  (ionBlur)="log($event)">
+        <ion-label range-left>Klein</ion-label>
+        <ion-label range-right>Groß</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-label [ngStyle]="{'font-size': fontSize+'px' }">{{ meinText }}</ion-label>
+
+</ion-content>

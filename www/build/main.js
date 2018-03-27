@@ -7,10 +7,10 @@ webpackJsonp([0],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__ = __webpack_require__(256);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__(346);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -79,7 +79,7 @@ var map = {
 		163
 	],
 	"../pages/ionic-my/ionic-my.module": [
-		208
+		211
 	]
 };
 function webpackAsyncContext(req) {
@@ -2404,10 +2404,12 @@ var PopoverPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-popover',template:/*ion-inline-start:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\popover\popover.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Popover Beispiel</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="presentPopover($event)">\n\n        <ion-icon name="more"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n\n\n  <ion-list >\n\n    <ion-item [color]="myColor">Item 1</ion-item>\n\n    <ion-item>Item 2</ion-item>\n\n    <ion-item [color]="myColor">Item 3</ion-item>\n\n    <ion-item>Item 4</ion-item>\n\n  </ion-list>\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\popover\popover.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* PopoverController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* PopoverController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* PopoverController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ToastController */]])
     ], PopoverPage);
     return PopoverPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=popover.js.map
@@ -2455,10 +2457,10 @@ var PopoverExampleComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'popover-example',template:/*ion-inline-start:"C:\Users\jogl2\Desktop\work\drsolutions\src\components\popover-example\popover-example.html"*/'<ion-item-group>\n\n  <ion-item-divider></ion-item-divider>\n\n  <ion-row (click)="save(\'secondary\')" align-self-center>\n\n    <ion-col offset-2 col-6>\n\n      <ion-label>Secondary</ion-label>\n\n    </ion-col>\n\n    <ion-col col-2>\n\n      <div class="secondaryCircle"></div>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-item-divider></ion-item-divider>\n\n  <ion-row (click)="save(\'danger\')">\n\n    <ion-col offset-2 col-6>\n\n      <ion-label>Danger</ion-label>\n\n    </ion-col>\n\n    <ion-col col-2>\n\n      <div class="dangerCircle"></div>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-item-divider></ion-item-divider>\n\n  <ion-row (click)="save(\'nigger\')">\n\n    <ion-col offset-2 col-6>\n\n      <ion-label>Nigger</ion-label>\n\n    </ion-col>\n\n    <ion-col col-2>\n\n      <div class="niggerCircle"></div>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-item-divider></ion-item-divider>\n\n  <ion-row (click)="save(\'primary\')">\n\n    <ion-col offset-2 col-6>\n\n      <ion-label>Primary</ion-label>\n\n    </ion-col>\n\n    <ion-col col-2>\n\n      <div class="primaryCircle"></div>\n\n    </ion-col>\n\n  </ion-row>\n\n\n\n  <ion-item-divider></ion-item-divider>\n\n  <ion-row (click)="close()">\n\n    <ion-col offset-2 col-6>\n\n      <ion-label>Abbrechen</ion-label>\n\n    </ion-col>\n\n    <ion-col col-2>\n\n      <ion-icon class="largeClose_icon" name="close"></ion-icon>\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-item-group>\n\n\n\n<!-- nicht so fancy :) -->\n\n<!-- <ion-list>\n\n  <ion-list-header>Farben ändern</ion-list-header>\n\n  <button ion-item (click)="save(\'secondary\')">Secondary</button>\n\n  <button ion-item (click)="save(\'danger\')">Danger</button>\n\n  <button ion-item (click)="save(\'nigger\')">Nigger</button>\n\n  <button ion-item (click)="save(\'primary\')">Primary</button>\n\n  <button ion-item (click)="close()">Abbrechen</button>\n\n</ion-list> -->'/*ion-inline-end:"C:\Users\jogl2\Desktop\work\drsolutions\src\components\popover-example\popover-example.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */]])
     ], PopoverExampleComponent);
     return PopoverExampleComponent;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=popover-example.js.map
@@ -2469,11 +2471,148 @@ var PopoverExampleComponent = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RadioPage = (function () {
+    function RadioPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.items = [
+            {
+                label: 'bla',
+                value: 'bla1',
+                checked: true
+            },
+            {
+                label: 'foo',
+                value: 'foo1',
+                checked: false
+            }
+        ];
+    }
+    RadioPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-radio',template:/*ion-inline-start:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\radio\radio.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Radio Beispiel</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list radio-group>\n\n    <ion-list-header>\n\n      Einfache Radio Buttons\n\n    </ion-list-header>\n\n\n\n    <ion-item>\n\n      <ion-label>Radio 1 ist default checked</ion-label>\n\n      <ion-radio checked="true" value="value1"></ion-radio>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>Radio 2</ion-label>\n\n      <ion-radio value="value2"></ion-radio>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>Radio 3 ist disabled</ion-label>\n\n      <ion-radio value="value3" disabled="true"></ion-radio>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\radio\radio.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */]])
+    ], RadioPage);
+    return RadioPage;
+}());
+
+//# sourceMappingURL=radio.js.map
+
+/***/ }),
+
+/***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioGroupPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RadioGroupPage = (function () {
+    function RadioGroupPage() {
+        this.spracheForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            "sprache": new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]({ value: 'java', disabled: false })
+        });
+    }
+    RadioGroupPage.prototype.selectionChanged = function (item) {
+        console.log('Selektierter Wert: ', item);
+    };
+    RadioGroupPage.prototype.getSelected = function (sprache) {
+        return this.spracheForm.get('sprache').value === sprache;
+    };
+    RadioGroupPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-radio-group',template:/*ion-inline-start:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\radio-group\radio-group.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>RadioGroup Beispiel</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <form [formGroup]="spracheForm">\n\n    <ion-list radio-group formControlName="sprache" (ionChange)="selectionChanged($event)">\n\n\n\n      <ion-list-header>\n\n        Sprachen\n\n      </ion-list-header>\n\n\n\n      <ion-item>\n\n        <ion-label>Java</ion-label>\n\n        <ion-radio value="java" checked="true"></ion-radio>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label>C++</ion-label>\n\n        <ion-radio value="cPlusPlus"></ion-radio>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label>Python</ion-label>\n\n        <ion-radio value="python"></ion-radio>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label>C</ion-label>\n\n        <ion-radio value="c"></ion-radio>\n\n      </ion-item>\n\n    </ion-list>\n\n\n\n    <img src="https://i.imgur.com/OzGlXoP.jpg" *ngIf="getSelected(\'java\')">\n\n    <img src="https://i.ytimg.com/vi/-HE9Dj9WuuY/maxresdefault.jpg" *ngIf="getSelected(\'cPlusPlus\')">\n\n    <img src="https://qph.fs.quoracdn.net/main-qimg-6aacbbc7aab3db69e8945ce5ae5fb18b" *ngIf="getSelected(\'python\')">\n\n    <img src="http://ds.arm.com/media/uploads/Working_With_ARM_DS5/Download-install-License/hello_world.c.png" *ngIf="getSelected(\'c\')">\n\n\n\n    \n\n  </form>\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\radio-group\radio-group.html"*/,
+        }),
+        __metadata("design:paramtypes", [])
+    ], RadioGroupPage);
+    return RadioGroupPage;
+}());
+
+//# sourceMappingURL=radio-group.js.map
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var RangePage = (function () {
+    function RangePage() {
+        this.brightness = 20;
+        this.contrast = 0;
+        this.warmth = 1300;
+        this.structure = { lower: 33, upper: 60 };
+        this.fontSize = 14;
+        this.meinText = 'Mein Text';
+    }
+    RangePage.prototype.rangeChanged = function (item) {
+        if (item.value === 22) {
+            item.color = 'danger';
+        }
+        else {
+            item.color = 'primary';
+        }
+    };
+    RangePage.prototype.log = function (item) {
+        console.log(item);
+        console.log(item.value);
+    };
+    RangePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-range',template:/*ion-inline-start:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\range\range.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Range Beispiel</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-badge item-start color="btnColor">{{ brightness }}</ion-badge>\n\n      <ion-range [(ngModel)]="brightness">\n\n        <ion-icon range-left small name="sunny"></ion-icon>\n\n        <ion-icon range-right name="sunny"></ion-icon>\n\n      </ion-range>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-badge item-start color="btnColor">{{ contrast }}</ion-badge>\n\n      <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" color="secondary">\n\n        <ion-icon range-left small name="contrast"></ion-icon>\n\n        <ion-icon range-right name="contrast"></ion-icon>\n\n      </ion-range>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-badge item-start color="btnColor">{{ structure.lower }}</ion-badge>\n\n      <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">\n\n        <ion-icon range-left small name="brush"></ion-icon>\n\n        <ion-icon range-right name="brush"></ion-icon>\n\n      </ion-range>\n\n      <ion-badge item-end color="btnColor">{{ structure.upper }}</ion-badge>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-badge item-start color="btnColor">{{ warmth }}</ion-badge>\n\n      <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">\n\n        <ion-icon range-left small color="danger" name="thermometer"></ion-icon>\n\n        <ion-icon range-right color="danger" name="thermometer"></ion-icon>\n\n      </ion-range>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-badge item-start color="btnColor">{{ fontSize }}</ion-badge>\n\n      <ion-range  min="10" \n\n                  max="22" \n\n                  step="2" \n\n                  snaps="true" \n\n                  [(ngModel)]="fontSize" \n\n                  debounce="1000"\n\n                  (ionChange)="rangeChanged($event)" \n\n                  (ionBlur)="log($event)">\n\n        <ion-label range-left>Klein</ion-label>\n\n        <ion-label range-right>Groß</ion-label>\n\n      </ion-range>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-label [ngStyle]="{\'font-size\': fontSize+\'px\' }">{{ meinText }}</ion-label>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\jogl2\Desktop\work\drsolutions\src\pages\range\range.html"*/,
+        })
+    ], RangePage);
+    return RangePage;
+}());
+
+//# sourceMappingURL=range.js.map
+
+/***/ }),
+
+/***/ 211:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonicMyPageModule", function() { return IonicMyPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_my__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_my__ = __webpack_require__(319);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2503,7 +2642,7 @@ var IonicMyPageModule = (function () {
 
 /***/ }),
 
-/***/ 252:
+/***/ 255:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2511,8 +2650,8 @@ var IonicMyPageModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_termin_termin__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__termin_erstellung_termin_erstellung__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__termin_bearbeitung_termin_bearbeitung__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__termin_erstellung_termin_erstellung__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__termin_bearbeitung_termin_bearbeitung__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_person_person__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2611,7 +2750,7 @@ var TerminPage = (function () {
 
 /***/ }),
 
-/***/ 253:
+/***/ 256:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2628,7 +2767,7 @@ var HttpConstants = (function () {
 
 /***/ }),
 
-/***/ 254:
+/***/ 257:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2712,7 +2851,7 @@ var TerminErstellungPage = (function () {
 
 /***/ }),
 
-/***/ 255:
+/***/ 258:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2805,13 +2944,13 @@ var TerminBearbeitungPage = (function () {
 
 /***/ }),
 
-/***/ 257:
+/***/ 260:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(282);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -2819,7 +2958,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 279:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2829,9 +2968,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_komponenten_komponenten__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_actionsheet_actionsheet__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_alert_alert__ = __webpack_require__(167);
@@ -2861,16 +3000,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_infinite_scroll_infinite_scroll__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_input_input__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_termin_termin__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_termin_termin__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_termin_erstellung_termin_erstellung__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_termin_termin__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_termin_erstellung_termin_erstellung__ = __webpack_require__(257);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_rxjs_add_operator_map__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_39_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_rxjs_add_operator_do__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_40_rxjs_add_operator_do__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41_rxjs_add_operator_catch__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_41_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__providers_handler_myErrorHandler__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_ionic_my_ionic_my_module__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__providers_handler_myErrorHandler__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_ionic_my_ionic_my_module__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_home_home_module__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_item_item__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_item_recorder_item_recorder__ = __webpack_require__(194);
@@ -2880,8 +3019,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__angular_common__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_loading_loading__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__providers_person_person__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_interceptor_myHttpInterceptor__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_termin_bearbeitung_termin_bearbeitung__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_interceptor_myHttpInterceptor__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_termin_bearbeitung_termin_bearbeitung__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__pages_modal_modal__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__pages_modal_example1_modal_example1__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__pages_modal_example2_modal_example2__ = __webpack_require__(200);
@@ -2892,6 +3031,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__pages_platform_config_token_platform_config_token__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__pages_popover_popover__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_popover_example_popover_example__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__pages_radio_radio__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__pages_radio_group_radio_group__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__pages_range_range__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2964,6 +3106,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -3011,6 +3156,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_62__pages_platform_config_token_platform_config_token__["a" /* PlatformConfigTokenPage */],
                 __WEBPACK_IMPORTED_MODULE_63__pages_popover_popover__["a" /* PopoverPage */],
                 __WEBPACK_IMPORTED_MODULE_64__components_popover_example_popover_example__["a" /* PopoverExampleComponent */],
+                __WEBPACK_IMPORTED_MODULE_65__pages_radio_radio__["a" /* RadioPage */],
+                __WEBPACK_IMPORTED_MODULE_66__pages_radio_group_radio_group__["a" /* RadioGroupPage */],
+                __WEBPACK_IMPORTED_MODULE_67__pages_range_range__["a" /* RangePage */],
                 __WEBPACK_IMPORTED_MODULE_59__pages_select_select__["a" /* SelectPage */],
                 __WEBPACK_IMPORTED_MODULE_37__pages_termin_termin__["a" /* TerminPage */],
                 __WEBPACK_IMPORTED_MODULE_38__pages_termin_erstellung_termin_erstellung__["a" /* TerminErstellungPage */],
@@ -3072,6 +3220,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_62__pages_platform_config_token_platform_config_token__["a" /* PlatformConfigTokenPage */],
                 __WEBPACK_IMPORTED_MODULE_63__pages_popover_popover__["a" /* PopoverPage */],
                 __WEBPACK_IMPORTED_MODULE_64__components_popover_example_popover_example__["a" /* PopoverExampleComponent */],
+                __WEBPACK_IMPORTED_MODULE_65__pages_radio_radio__["a" /* RadioPage */],
+                __WEBPACK_IMPORTED_MODULE_66__pages_radio_group_radio_group__["a" /* RadioGroupPage */],
+                __WEBPACK_IMPORTED_MODULE_67__pages_range_range__["a" /* RangePage */],
                 __WEBPACK_IMPORTED_MODULE_59__pages_select_select__["a" /* SelectPage */],
                 __WEBPACK_IMPORTED_MODULE_37__pages_termin_termin__["a" /* TerminPage */],
                 __WEBPACK_IMPORTED_MODULE_38__pages_termin_erstellung_termin_erstellung__["a" /* TerminErstellungPage */],
@@ -3101,7 +3252,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 315:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3139,7 +3290,7 @@ var AlterValidator = (function () {
 
 /***/ }),
 
-/***/ 316:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3175,18 +3326,18 @@ var IonicMyPage = (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_komponenten_komponenten__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_termin_termin__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_termin_termin__ = __webpack_require__(255);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3250,7 +3401,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 344:
+/***/ 347:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3315,7 +3466,7 @@ var MyErrorHandler = (function () {
 
 /***/ }),
 
-/***/ 345:
+/***/ 348:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3323,7 +3474,7 @@ var MyErrorHandler = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return defaultTimeout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MyHttpInterceptor; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_timeout__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_timeout__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_timeout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_timeout__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3368,7 +3519,7 @@ var MyHttpInterceptor = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TerminProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__httpConstants_httpConstants__ = __webpack_require__(256);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3465,6 +3616,9 @@ var TerminProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__platform_platform__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__platform_config_token_platform_config_token__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__popover_popover__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__radio_radio__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__radio_group_radio_group__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__range_range__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3474,6 +3628,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
 
 
 
@@ -3626,10 +3783,13 @@ var KomponentenPage = (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_37__popover_popover__["a" /* PopoverPage */]);
     };
     KomponentenPage.prototype.goToRadioButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_38__radio_radio__["a" /* RadioPage */]);
     };
     KomponentenPage.prototype.goToRadioGroup = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_39__radio_group_radio_group__["a" /* RadioGroupPage */]);
     };
     KomponentenPage.prototype.goToRange = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_40__range_range__["a" /* RangePage */]);
     };
     KomponentenPage.prototype.goToRefresher = function () {
     };
@@ -3779,7 +3939,7 @@ var ItemSlidingPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators_alterValidator__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validators_alterValidator__ = __webpack_require__(318);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3856,5 +4016,5 @@ var InputPage = (function () {
 
 /***/ })
 
-},[257]);
+},[260]);
 //# sourceMappingURL=main.js.map
