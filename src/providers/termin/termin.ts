@@ -7,32 +7,33 @@ import { HttpConstants } from '../httpConstants/httpConstants';
 @Injectable()
 export class TerminProvider {
   readonly API = HttpConstants.RENES_IP_API;
+  readonly SERVICE_NAME = 'terminService/';
 
   constructor(public httpClient: HttpClient) {
   }
 
   getTermine() {
-    return this.httpClient.get(this.API + 'getAllTermine')
+    return this.httpClient.get(this.API + this.SERVICE_NAME + 'getAllTermine')
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminErstellen(termin: Termin) {
-    return this.httpClient.post<Termin>(this.API +'saveOrUpdateTermin', 
+    return this.httpClient.post<Termin>(this.API + this.SERVICE_NAME + 'saveOrUpdateTermin', 
       termin)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminAendern(termin: Termin) {
-    return this.httpClient.post<Termin>(this.API + 'saveOrUpdateTermin', 
+    return this.httpClient.post<Termin>(this.API + this.SERVICE_NAME + 'saveOrUpdateTermin', 
       termin)
       .do(this._logResponse)
       .map(this._mapDataToTermine)
   }
 
   terminLoeschen(id: number) {
-    return this.httpClient.post(this.API + 'deleteTermin', id)
+    return this.httpClient.post(this.API + this.SERVICE_NAME + 'deleteTermin', id)
     .map(this._mapDataToTermine)
   }
 

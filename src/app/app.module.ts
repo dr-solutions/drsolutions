@@ -72,6 +72,7 @@ import { PopoverExampleComponent } from '../components/popover-example/popover-e
 import { RadioPage } from '../pages/radio/radio';
 import { RadioGroupPage } from '../pages/radio-group/radio-group';
 import { RangePage } from '../pages/range/range';
+import { PersonPage } from '../pages/person/person';
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import { RangePage } from '../pages/range/range';
     SelectPage,
     TerminPage,
     TerminErstellungPage,
-    TerminBearbeitungPage
+    TerminBearbeitungPage,    
+    PersonPage
   ],
   imports: [
     HomePageModule,
@@ -181,7 +183,8 @@ import { RangePage } from '../pages/range/range';
     SelectPage,
     TerminPage,
     TerminErstellungPage,
-    TerminBearbeitungPage
+    TerminBearbeitungPage,
+    PersonPage
   ],
   providers: [        
     StatusBar,

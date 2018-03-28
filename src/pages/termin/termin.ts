@@ -34,7 +34,7 @@ export class TerminPage {
   }
 
   goToTerminBearbeitung(termin: Termin) {
-    this.personProvider.getPersonen().subscribe((personen: PersonSelect[]) => {
+    this.personProvider.getPersonenSelect().subscribe((personen: PersonSelect[]) => {
       this.navCtrl.push(TerminBearbeitungPage, { termin: termin, personen: personen});
     });
   }

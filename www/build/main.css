@@ -43534,6 +43534,10 @@ page-komponenten ion-col button {
   width: 100%;
 }
 
+page-person ion-icon {
+  font-size: 200%;
+}
+
 page-popover .myIconSizedUp {
   font-size: 4000%;
 }

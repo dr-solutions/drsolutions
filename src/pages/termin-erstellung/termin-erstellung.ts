@@ -21,7 +21,7 @@ export class TerminErstellungPage {
               public terminProvider: TerminProvider,
               public personProvider: PersonProvider) {
 
-    this.personProvider.getPersonen().subscribe((personen: PersonSelect[]) => {
+    this.personProvider.getPersonenSelect().subscribe((personen: PersonSelect[]) => {
       this.personen = personen;
     });
 
