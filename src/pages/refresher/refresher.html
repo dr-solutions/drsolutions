@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Refresher Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)" *ngIf="max <= 5">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Runter ziehen zum aktualisieren" refreshingSpinner="bubbles"
+      refreshingText="Aktualisieren...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list inset>
+    <ion-list-header>
+      5x darfst du ziehen
+    </ion-list-header>
+    <ion-item *ngFor="let benutzer of benutzerList">
+      <ion-avatar item-left>
+        <img src="{{ benutzer.picture.thumbnail }}">
+      </ion-avatar>
+      {{ benutzer.name.first }} {{ benutzer.name.last }}
+    </ion-item>
+  </ion-list>
+
+  <!-- 
+    pullingIcon Property kann alle ionic-items anzeigen
+    
+    refreshingSpinner Property kann folgende Werte haben (so wie ion-spinner):
+        ios	
+        ios-small	
+        bubbles	
+        circles	
+        crescent	
+        dots
+  -->
+
+  <a href="https://ionicframework.com/docs/api/components/refresher/Refresher/#input-properties">Input und Output Properties</a>
+
+
+</ion-content>

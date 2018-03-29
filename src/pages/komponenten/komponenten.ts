@@ -39,6 +39,9 @@ import { PopoverPage } from '../popover/popover';
 import { RadioPage } from '../radio/radio';
 import { RadioGroupPage } from '../radio-group/radio-group';
 import { RangePage } from '../range/range';
+import { RefresherPage } from '../refresher/refresher';
+import { RegisterModeConfigsPage } from '../register-mode-configs/register-mode-configs';
+import { RowPage } from '../row/row';
 
 @Component({
   selector: 'page-komponenten',
@@ -207,15 +210,15 @@ export class KomponentenPage {
   }
 
   goToRefresher() {
-
+    this.navCtrl.push(RefresherPage);
   }
 
   goToregisterModeConfigs() {
-
+    this.navCtrl.push(RegisterModeConfigsPage);
   }
 
   goToRow() {
-
+    this.navCtrl.push(RowPage);
   }
 
   goToScroll() {

@@ -73,6 +73,9 @@ import { RadioPage } from '../pages/radio/radio';
 import { RadioGroupPage } from '../pages/radio-group/radio-group';
 import { RangePage } from '../pages/range/range';
 import { PersonPage } from '../pages/person/person';
+import { RefresherPage } from '../pages/refresher/refresher';
+import { RegisterModeConfigsPage } from '../pages/register-mode-configs/register-mode-configs';
+import { RowPage } from '../pages/row/row';
 
 @NgModule({
   declarations: [
@@ -120,6 +123,9 @@ import { PersonPage } from '../pages/person/person';
     RadioPage,
     RadioGroupPage,
     RangePage,
+    RefresherPage,
+    RegisterModeConfigsPage,
+    RowPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -180,6 +186,9 @@ import { PersonPage } from '../pages/person/person';
     RadioPage,
     RadioGroupPage,
     RangePage,
+    RefresherPage,
+    RegisterModeConfigsPage,
+    RowPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
