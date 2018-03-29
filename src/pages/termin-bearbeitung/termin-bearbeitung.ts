@@ -28,19 +28,10 @@ export class TerminBearbeitungPage {
       zeitpunkt: ['', Validators.required]
     });
 
-    if (this.termin && this.termin.beteiligtePersonen) {
-      this.termin.beteiligtePersonen.forEach((person: PersonSelect) => {
-        let personIsAlreadySelected: PersonSelect = this.personen
-          .find((beteiligtePerson: PersonSelect) => beteiligtePerson.value === person.value);
-        let index = this.personen.indexOf(personIsAlreadySelected);
-        this.personen[index].selected = true;
-      });
-
-      if (this.personen) {
-        this.terminBearbeitungsForm.patchValue({ 'bezeichnung': this.termin.bezeichnung });
-        this.terminBearbeitungsForm.patchValue({ 'beiteiligtePersonen': this.personen });
-        this.terminBearbeitungsForm.patchValue({ 'zeitpunkt': this.termin.zeitpunkt });
-      }
+    if (this.personen) {
+      this.terminBearbeitungsForm.patchValue({ 'bezeichnung': this.termin.bezeichnung });
+      this.terminBearbeitungsForm.patchValue({ 'beiteiligtePersonen': this.termin.beteiligtePersonen });
+      this.terminBearbeitungsForm.patchValue({ 'zeitpunkt': this.termin.zeitpunkt });
     }
   }
 
@@ -72,4 +63,7 @@ export class TerminBearbeitungPage {
     }
   }
 
+  compareSelectedPersonen(p1 : PersonSelect, p2 : PersonSelect): boolean {
+    return p1 && p2 ? p1.value === p2.value : p1 === p2;
+  }
 }
