@@ -42,6 +42,7 @@ import { InputPage } from '../pages/input/input';
 import { TerminProvider } from '../providers/termin/termin';
 import { TerminPage } from '../pages/termin/termin';
 import { TerminErstellungPage } from '../pages/termin-erstellung/termin-erstellung';
+import { PersonBearbeitungPage } from '../pages/person-bearbeitung/person-bearbeitung';
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/do";
 import "rxjs/add/operator/catch";
@@ -76,6 +77,7 @@ import { PersonPage } from '../pages/person/person';
 import { RefresherPage } from '../pages/refresher/refresher';
 import { RegisterModeConfigsPage } from '../pages/register-mode-configs/register-mode-configs';
 import { RowPage } from '../pages/row/row';
+import { PersonErstellungPage } from '../pages/person-erstellung/person-erstellung';
 
 @NgModule({
   declarations: [
@@ -130,7 +132,9 @@ import { RowPage } from '../pages/row/row';
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage,    
-    PersonPage
+    PersonPage,
+    PersonBearbeitungPage,
+    PersonErstellungPage    
   ],
   imports: [
     HomePageModule,
@@ -193,7 +197,9 @@ import { RowPage } from '../pages/row/row';
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage,
-    PersonPage
+    PersonPage,
+    PersonBearbeitungPage,
+    PersonErstellungPage    
   ],
   providers: [        
     StatusBar,

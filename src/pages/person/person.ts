@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+import { NavController, NavParams, ItemSliding, ToastController, AlertController } from 'ionic-angular';
 import { Person } from '../../interfaces/person/person';
 import { PersonProvider } from '../../providers/person/person';
+import { PersonBearbeitungPage } from '../person-bearbeitung/person-bearbeitung';
+import { PersonErstellungPage } from '../person-erstellung/person-erstellung';
 
 @Component({
   selector: 'page-person',
@@ -24,13 +26,14 @@ export class PersonPage {
   }
 
   goToPersonErstellung() {
-    //this.navCtrl.push(TerminErstellungPage);
+    console.log('erstellung');
+    this.navCtrl.push(PersonErstellungPage);
   }
 
   goToPersonBearbeitung(person: Person) {
-    //this.personProvider.getPersonen().subscribe((personen: Person[]) => {
-    //  this.navCtrl.push(TerminBearbeitungPage, { person: person});
-    //});
+    this.personProvider.getPersonen().subscribe((personen: Person[]) => {
+      this.navCtrl.push(PersonBearbeitungPage, { person: person});
+    });
   }
 
   showConfirmation(id) {
@@ -72,5 +75,9 @@ export class PersonPage {
       });
       deleteToast.present();
     });
+  }
+
+  delete(item: ItemSliding, person: Person) {
+    this.showConfirmation(person.id);
   }
 }

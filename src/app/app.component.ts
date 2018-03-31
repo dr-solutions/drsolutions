@@ -27,7 +27,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Komponenten', component: KomponentenPage },
-      { title: 'Termin', component: TerminPage},
+      { title: 'Termine', component: TerminPage},
       { title: 'Personen', component: PersonPage }
     ];
   }

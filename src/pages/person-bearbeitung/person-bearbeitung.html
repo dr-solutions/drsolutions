@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Person bearbeiten</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content>
+      <form (submit)="submitPersonBearbeitung()" [formGroup]="personBearbeitungsForm">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-icon id="avatar" name="person" item-start color="dark"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-list>
+          <ion-item>
+            <ion-label for="vorname" floating>Vorname</ion-label>
+            <ion-input formControlName="vorname" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="nachname" floating>Nachname</ion-label>
+            <ion-input formControlName="nachname" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="mail" floating>E-Mail</ion-label>
+            <ion-input formControlName="mail" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label for="telefon" floating>Telefonnummer</ion-label>
+            <ion-input formControlName="telefon" type="tel"></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" [disabled]="!personBearbeitungsForm.valid">
+          Speichern
+        </button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
