@@ -19,9 +19,15 @@ export class LaenderProvider {
 
   getLaenderImages() {
     return this.httpClient.get('https://restcountries.eu/rest/v2/regionalbloc/eu')
-    .do(this._logResponse)
-    .map(this._mapDataToLaenderImages)
-    .catch(this._throwError);
+      .do(this._logResponse)
+      .map(this._mapDataToLaenderImages)
+      .catch(this._throwError);
+  }
+
+  searchLaenderByName(name: string) {
+    return this.httpClient.get('https://restcountries.eu/rest/v2/name/' + name)
+      .do(this._logResponse)
+      .map(this._mapDataToLaender)
   }
 
   private _logResponse(res) {

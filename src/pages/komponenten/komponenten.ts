@@ -42,6 +42,8 @@ import { RangePage } from '../range/range';
 import { RefresherPage } from '../refresher/refresher';
 import { RegisterModeConfigsPage } from '../register-mode-configs/register-mode-configs';
 import { RowPage } from '../row/row';
+import { ScrollPage } from '../scroll/scroll';
+import { SearchbarPage } from '../searchbar/searchbar';
 
 @Component({
   selector: 'page-komponenten',
@@ -222,11 +224,11 @@ export class KomponentenPage {
   }
 
   goToScroll() {
-
+    this.navCtrl.push(ScrollPage);
   }
 
   goToSearchbar() {
-
+    this.navCtrl.push(SearchbarPage);
   }
 
   goToSegment() {

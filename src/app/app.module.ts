@@ -78,6 +78,8 @@ import { RefresherPage } from '../pages/refresher/refresher';
 import { RegisterModeConfigsPage } from '../pages/register-mode-configs/register-mode-configs';
 import { RowPage } from '../pages/row/row';
 import { PersonErstellungPage } from '../pages/person-erstellung/person-erstellung';
+import { ScrollPage } from '../pages/scroll/scroll';
+import { SearchbarPage } from '../pages/searchbar/searchbar';
 
 @NgModule({
   declarations: [
@@ -128,6 +130,8 @@ import { PersonErstellungPage } from '../pages/person-erstellung/person-erstellu
     RefresherPage,
     RegisterModeConfigsPage,
     RowPage,
+    ScrollPage,
+    SearchbarPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -193,6 +197,8 @@ import { PersonErstellungPage } from '../pages/person-erstellung/person-erstellu
     RefresherPage,
     RegisterModeConfigsPage,
     RowPage,
+    ScrollPage,
+    SearchbarPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,

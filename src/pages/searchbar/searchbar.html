@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Searchbar Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar  (ionInput)="getItems($event)" 
+                  (ionCancel)="onCancel($event)"
+                  (ionClear)="onClear($event)"
+                  showCancelButton="true"
+                  cancelButtonText="Abbrechen"
+                  placeholder="Suche nach Ländernamen"
+                  debounce="200">
+  </ion-searchbar>
+  <!-- animated="true" könnte auch gesetzt werden gefällt mir aber nicht -->
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item.name }}
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="errorText" class="myErrorText">
+    {{ errorText }}
+  </ion-item>
+
+</ion-content>
