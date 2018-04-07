@@ -45,6 +45,7 @@ import { RowPage } from '../row/row';
 import { ScrollPage } from '../scroll/scroll';
 import { SearchbarPage } from '../searchbar/searchbar';
 import { SegmentPage } from '../segment/segment';
+import { ShowWhenPage } from '../show-when/show-when';
 
 @Component({
   selector: 'page-komponenten',
@@ -241,7 +242,7 @@ export class KomponentenPage {
   }
 
   goToShowWhen() {
-
+    this.navCtrl.push(ShowWhenPage);
   }
 
   goToSlide() {

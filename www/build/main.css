@@ -47458,3 +47458,7 @@ page-segment .biggerIcon {
 page-segment .myContent {
   text-align: center;
 }
+
+page-select .meineTierSelect {
+  color: #f53d3d;
+}

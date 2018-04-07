@@ -1,13 +1,55 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>select</ion-title>
+    <ion-title>Select Beispiel</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <a href="https://ionicframework.com/docs/api/components/option/Option/">Option nicht vergessen</a>
+  <ion-item>
+    <ion-label>Select Typ wählen</ion-label>
+    <ion-select [(ngModel)]="interface">
+      <ion-option value="alert">Alert</ion-option>
+      <ion-option value="popover">Popover</ion-option>
+      <ion-option value="action-sheet">ActionSheet</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="interface === 'alert'">
+    <ion-label>Tiere im Alert</ion-label>
+    <ion-select [(ngModel)]="tier" [selectOptions]="tiereAlertOpts">
+      <ion-option *ngFor="let meinTier of tiere" (ionSelect)="tierSelected($event)">{{ meinTier }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="interface === 'popover'">
+    <ion-label>Tiere im Popover</ion-label>
+    <ion-select [(ngModel)]="tierPopover" interface="popover" [selectOptions]="tierePopoverOpts">
+      <ion-option *ngFor="let meinTier of tiere" (ionSelect)="tierSelected($event)">{{ meinTier }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="interface === 'action-sheet'">
+    <ion-label>Tiere im Actionsheet</ion-label>
+    <ion-select [(ngModel)]="tierActionSheet" interface="action-sheet" [selectOptions]="tiereActionSheetOpts">
+      <ion-option *ngFor="let meinTier of tiere" (ionSelect)="tierSelected($event)">{{ meinTier }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Multiselect Tiere</ion-label>
+    <ion-select [(ngModel)]="tiereSelected" multiple="true">
+      <ion-option *ngFor="let meinTier of tiere" (ionSelect)="tierSelected($event)">{{ meinTier }}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Autos mit Objekten</ion-label>
+    <ion-select [(ngModel)]="autosSelected" multiple="true" [compareWith]="compareFn">
+      <ion-option *ngFor="let auto of autos" [value]="auto" [disabled]="auto.ps < 90">{{ auto.label }}</ion-option>
+    </ion-select>
+  </ion-item>
 
 </ion-content>
