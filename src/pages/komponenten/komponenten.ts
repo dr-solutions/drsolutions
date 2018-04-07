@@ -44,6 +44,7 @@ import { RegisterModeConfigsPage } from '../register-mode-configs/register-mode-
 import { RowPage } from '../row/row';
 import { ScrollPage } from '../scroll/scroll';
 import { SearchbarPage } from '../searchbar/searchbar';
+import { SegmentPage } from '../segment/segment';
 
 @Component({
   selector: 'page-komponenten',
@@ -232,11 +233,7 @@ export class KomponentenPage {
   }
 
   goToSegment() {
-
-  }
-
-  goToSegmentButton() {
-    
+    this.navCtrl.push(SegmentPage);
   }
 
   goToSelect() {
@@ -252,18 +249,6 @@ export class KomponentenPage {
   }
 
   goToSpinner() {
-
-  }
-
-  goToSplitPane() {
-
-  }
-
-  goToTab() {
-
-  }
-
-  goToTabs() {
 
   }
 
@@ -289,14 +274,6 @@ export class KomponentenPage {
 
   goToTypography() {
 
-  }
-
-  goToViewController() {
-
-  }
-
-  goToVirualScroll() {
-    
   }
 
 }

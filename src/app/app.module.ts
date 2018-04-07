@@ -80,6 +80,7 @@ import { RowPage } from '../pages/row/row';
 import { PersonErstellungPage } from '../pages/person-erstellung/person-erstellung';
 import { ScrollPage } from '../pages/scroll/scroll';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
+import { SegmentPage } from '../pages/segment/segment';
 
 @NgModule({
   declarations: [
@@ -132,6 +133,7 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
     RowPage,
     ScrollPage,
     SearchbarPage,
+    SegmentPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,
@@ -199,6 +201,7 @@ import { SearchbarPage } from '../pages/searchbar/searchbar';
     RowPage,
     ScrollPage,
     SearchbarPage,
+    SegmentPage,
     SelectPage,
     TerminPage,
     TerminErstellungPage,

@@ -1,0 +1,101 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Segment Beispiel</ion-title>
+  </ion-navbar>
+
+  <ion-segment [(ngModel)]="trinken">
+    <ion-segment-button value="wine" [disabled]="essen == 'ice-cream'">
+      Wein
+    </ion-segment-button>
+    <ion-segment-button value="beer" [disabled]="essen == 'ice-cream'">
+      Bier
+    </ion-segment-button>
+    <ion-segment-button value="cafe" (ionSelect)="cafeClicked()">
+      Kaffee
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div [ngSwitch]="essen">
+    <ion-list *ngSwitchCase="'ice-cream'">
+      <ion-item>
+        <ion-icon name="ice-cream"></ion-icon>
+        Ice Cream
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'pizza'">
+      <ion-item>
+        <ion-icon name="pizza"></ion-icon>
+        Pizza
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'nutrition'">
+      <ion-item>
+        <ion-icon name="nutrition"></ion-icon>
+        Nutrition
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+  <div [ngSwitch]="trinken">
+    <ion-item *ngSwitchCase="'wine'">
+      <ion-icon name="wine"></ion-icon>
+      Wein
+    </ion-item>
+
+    <ion-item *ngSwitchCase="'beer'">
+      <ion-icon name="beer"></ion-icon>
+      Bier
+    </ion-item>
+
+    <ion-item *ngSwitchCase="'cafe'">
+      <ion-icon name="cafe"></ion-icon>
+      Kaffee
+    </ion-item>
+  </div>
+
+  <br>
+  <br>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-segment [(ngModel)]="wetter" color="nigger">
+        <ion-segment-button value="rainy">
+          Regen
+        </ion-segment-button>
+        <ion-segment-button value="sunny">
+          Sonne
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-header>
+    <ion-card-content class="myContent">
+      <ion-icon name="rainy" *ngIf="wetter == 'rainy'" class="biggerIcon" color="info"></ion-icon>
+      <ion-icon name="sunny" *ngIf="wetter == 'sunny'" class="biggerIcon" color="myYellow"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-segment [(ngModel)]="essen" color="myLila">
+    <ion-segment-button value="ice-cream">
+      <ion-icon name="ice-cream"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pizza">
+      <ion-icon name="pizza"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="nutrition">
+      <ion-icon name="nutrition"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>
