@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Slide Beispiel</ion-title>
+  </ion-navbar>
+
+  <ion-row>
+    <button ion-button outline (click)="goToSlide()">Zu Slide 3</button>
+    <button ion-button outline (click)="goToPrevious()">Zurück</button>
+    <button ion-button outline (click)="goToNext()">Vor</button>
+    <button ion-button outline (click)="startAutoplay()">Autoplay on</button>
+    <button ion-button outline (click)="stopAutoplay()">Autoplay off</button>
+  </ion-row>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-slides (ionSlideDidChange)="slideChanged()" 
+              autoplay="500" 
+              direction="horizontal" 
+              effect="flip" 
+              pager="true"
+              paginationType="bullets">  
+              <!-- 
+                effect: slide, fade, cube, coverflow, flip
+                paginationType: bullets, fraction, progress 
+                direction: vertical, horizontal
+              -->
+    <ion-slide class="slide1Background">
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide class="slide2Background">
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide class="slide3Background">
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

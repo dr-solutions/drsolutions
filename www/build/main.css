@@ -47462,3 +47462,15 @@ page-segment .myContent {
 page-select .meineTierSelect {
   color: #f53d3d;
 }
+
+page-slide .slide1Background {
+  background: #ff9100;
+}
+
+page-slide .slide2Background {
+  background: #532c00;
+}
+
+page-slide .slide3Background {
+  background: #49005f;
+}

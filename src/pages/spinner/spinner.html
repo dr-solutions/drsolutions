@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Spinner Beispiel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button ion-button outline (click)="startAndStopSpinner()">Start and Stop Spinner</button>
+
+  <ion-item>
+    default:
+    <ion-spinner [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    default with duration 5000:
+    <ion-spinner duration="5000" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    bubbles:
+    <ion-spinner name="bubbles" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    ios:
+    <ion-spinner name="ios" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    ios-small :
+    <ion-spinner name="ios-small" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    circles:
+    <ion-spinner name="circles" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    crescent:
+    <ion-spinner name="crescent" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    crescent:
+    <ion-spinner name="dots" [paused]="paused"></ion-spinner>
+  </ion-item>
+
+</ion-content>

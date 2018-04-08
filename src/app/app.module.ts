@@ -82,6 +82,8 @@ import { ScrollPage } from '../pages/scroll/scroll';
 import { SearchbarPage } from '../pages/searchbar/searchbar';
 import { SegmentPage } from '../pages/segment/segment';
 import { ShowWhenPage } from '../pages/show-when/show-when';
+import { SlidePage } from '../pages/slide/slide';
+import { SpinnerPage } from '../pages/spinner/spinner';
 
 @NgModule({
   declarations: [
@@ -137,6 +139,8 @@ import { ShowWhenPage } from '../pages/show-when/show-when';
     SegmentPage,
     SelectPage,
     ShowWhenPage,
+    SlidePage,
+    SpinnerPage,
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage,    
@@ -206,6 +210,8 @@ import { ShowWhenPage } from '../pages/show-when/show-when';
     SegmentPage,
     SelectPage,
     ShowWhenPage,
+    SlidePage,
+    SpinnerPage,
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage,

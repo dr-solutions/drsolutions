@@ -46,6 +46,8 @@ import { ScrollPage } from '../scroll/scroll';
 import { SearchbarPage } from '../searchbar/searchbar';
 import { SegmentPage } from '../segment/segment';
 import { ShowWhenPage } from '../show-when/show-when';
+import { SlidePage } from '../slide/slide';
+import { SpinnerPage } from '../spinner/spinner';
 
 @Component({
   selector: 'page-komponenten',
@@ -246,11 +248,11 @@ export class KomponentenPage {
   }
 
   goToSlide() {
-
+    this.navCtrl.push(SlidePage);
   }
 
   goToSpinner() {
-
+    this.navCtrl.push(SpinnerPage);
   }
 
   goToThumbnail() {
