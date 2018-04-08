@@ -84,6 +84,11 @@ import { SegmentPage } from '../pages/segment/segment';
 import { ShowWhenPage } from '../pages/show-when/show-when';
 import { SlidePage } from '../pages/slide/slide';
 import { SpinnerPage } from '../pages/spinner/spinner';
+import { ThumbnailPage } from '../pages/thumbnail/thumbnail';
+import { ToastPage } from '../pages/toast/toast';
+import { TogglePage } from '../pages/toggle/toggle';
+import { ToolbarPage } from '../pages/toolbar/toolbar';
+import { TypographyPage } from '../pages/typography/typography';
 
 @NgModule({
   declarations: [
@@ -143,7 +148,12 @@ import { SpinnerPage } from '../pages/spinner/spinner';
     SpinnerPage,
     TerminPage,
     TerminErstellungPage,
-    TerminBearbeitungPage,    
+    TerminBearbeitungPage,
+    ThumbnailPage,
+    ToastPage,  
+    TogglePage,
+    ToolbarPage,
+    TypographyPage,
     PersonPage,
     PersonBearbeitungPage,
     PersonErstellungPage    
@@ -215,6 +225,11 @@ import { SpinnerPage } from '../pages/spinner/spinner';
     TerminPage,
     TerminErstellungPage,
     TerminBearbeitungPage,
+    ThumbnailPage,
+    ToastPage,
+    TogglePage,
+    ToolbarPage,
+    TypographyPage,
     PersonPage,
     PersonBearbeitungPage,
     PersonErstellungPage    

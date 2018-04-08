@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Thumbnail Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item *ngFor="let land of laender">
+    <ion-thumbnail item-start>  <!-- item-end -->
+        <img src="{{ land.flag }}">
+    </ion-thumbnail>
+    <h2>{{ land.name }}</h2>
+    <p>{{ land.alpha3Code }}</p>
+  </ion-item>
+
+</ion-content>

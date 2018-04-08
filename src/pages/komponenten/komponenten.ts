@@ -48,6 +48,11 @@ import { SegmentPage } from '../segment/segment';
 import { ShowWhenPage } from '../show-when/show-when';
 import { SlidePage } from '../slide/slide';
 import { SpinnerPage } from '../spinner/spinner';
+import { ThumbnailPage } from '../thumbnail/thumbnail';
+import { ToastPage } from '../toast/toast';
+import { TogglePage } from '../toggle/toggle';
+import { ToolbarPage } from '../toolbar/toolbar';
+import { TypographyPage } from '../typography/typography';
 
 @Component({
   selector: 'page-komponenten',
@@ -256,27 +261,23 @@ export class KomponentenPage {
   }
 
   goToThumbnail() {
-
-  }
-
-  goToTitle() {
-
+    this.navCtrl.push(ThumbnailPage);
   }
 
   goToToastController() {
-
+    this.navCtrl.push(ToastPage);
   }
 
   goToToogle() {
-
+    this.navCtrl.push(TogglePage);
   }
 
   goToToolbar() {
-
+    this.navCtrl.push(ToolbarPage);
   }
 
   goToTypography() {
-
+    this.navCtrl.push(TypographyPage);
   }
 
 }
